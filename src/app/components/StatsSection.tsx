@@ -46,7 +46,7 @@ function CountUp({
   }, [started, target, isText]);
 
   return (
-    <span ref={ref} className="text-4xl font-extrabold" style={{ color: '#040404' }}>
+    <span ref={ref} className="text-3xl sm:text-4xl font-extrabold" style={{ color: '#040404' }}>
       {isText ? textValue : `${count}${suffix}`}
     </span>
   );
@@ -81,11 +81,11 @@ export default function StatsSection() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-2xl p-6 border text-center space-y-3 transition-all duration-300"
+              className="rounded-2xl p-4 sm:p-6 border text-center space-y-3 transition-all duration-300"
               style={{ backgroundColor: '#ffffff', borderColor: '#d8dac4' }}
             >
               <div

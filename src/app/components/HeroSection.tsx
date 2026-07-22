@@ -87,9 +87,9 @@ export default function HeroSection() {
           </div>
 
           {/* Right: Photo Grid */}
-          <div className="relative grid grid-cols-2 gap-3 h-[520px] lg:h-[580px]">
+          <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4 h-auto sm:h-[520px] lg:h-[580px]">
             {/* Large top-left image */}
-            <div className="relative rounded-2xl overflow-hidden row-span-1 img-hover-zoom">
+            <div className="relative rounded-2xl overflow-hidden img-hover-zoom h-60 sm:h-auto">
               <AppImage
                 src={IMAGES.heroImage1}
                 alt="Elegant restaurant interior with warm lighting and set tables in Vienna"
@@ -113,7 +113,7 @@ export default function HeroSection() {
 
             {/* Top-right: green accent card */}
             <div
-              className="relative rounded-2xl overflow-hidden flex flex-col justify-between p-5"
+              className="relative rounded-2xl overflow-hidden flex flex-col justify-between p-5 h-56 sm:h-auto"
               style={{ backgroundColor: '#9DC40E' }}
             >
               <div>
@@ -128,14 +128,14 @@ export default function HeroSection() {
               </div>
               <div className="space-y-2">
                 {['Bürokratie-Entlastung', 'Starke Partner', 'WKO-zertifiziert']?.map((item) => (
-                  <div key={item} className="flex items-center gap-2">
+                  <div key={item} className="flex items-start gap-2">
                     <div
-                      className="w-4 h-4 rounded-full flex items-center justify-center"
+                      className="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5"
                       style={{ backgroundColor: 'rgba(255,255,255,0.25)' }}
                     >
                       <Icon name="CheckIcon" size={10} className="text-white" />
                     </div>
-                    <span className="text-white/90 text-xs font-medium">{item}</span>
+                    <span className="text-white/90 text-xs font-medium leading-tight">{item}</span>
                   </div>
                 ))}
               </div>
@@ -143,7 +143,7 @@ export default function HeroSection() {
 
             {/* Bottom-left: stats card */}
             <div
-              className="relative rounded-2xl p-5 flex flex-col justify-between"
+              className="relative rounded-2xl p-5 flex flex-col justify-between h-48 sm:h-auto"
               style={{ backgroundColor: '#9DC40E' }}
             >
               <p
@@ -152,16 +152,16 @@ export default function HeroSection() {
               >
                 Unsere Bilanz
               </p>
-              <div className="grid grid-cols-2 gap-3 mt-3">
+              <div className="flex flex-col sm:flex-row gap-4 mt-3">
                 <div>
-                  <p className="text-3xl font-extrabold text-white">9+</p>
-                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                  <p className="text-3xl font-extrabold text-white leading-none">9+</p>
+                  <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.7)' }}>
                     Leistungs­bereiche
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl font-extrabold text-white">100+</p>
-                  <p className="text-xs mt-0.5" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                  <p className="text-3xl font-extrabold text-white leading-none">100+</p>
+                  <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.7)' }}>
                     Partner­betriebe
                   </p>
                 </div>
@@ -169,7 +169,7 @@ export default function HeroSection() {
             </div>
 
             {/* Bottom-right: photo */}
-            <div className="relative rounded-2xl overflow-hidden img-hover-zoom">
+            <div className="relative rounded-2xl overflow-hidden img-hover-zoom h-60 sm:h-auto">
               <AppImage
                 src={IMAGES.heroImage2}
                 alt="Professional chef in modern restaurant kitchen preparing gourmet dishes"

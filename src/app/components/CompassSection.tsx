@@ -415,7 +415,40 @@ export default function CompassSection() {
           </div>
         </div>
 
-        {/* Segment legend / quick links below compass — REMOVED */}
+        {/* Mobile quick links */}
+        <div className="mt-10 grid grid-cols-2 gap-2.5 sm:hidden">
+          {segments.map((seg) => (
+            <button
+              key={seg.id}
+              onClick={() => handleSegmentClick(seg.href)}
+              className="flex items-center gap-2 p-2.5 rounded-xl border text-left transition-all duration-200 active:scale-95"
+              style={{ backgroundColor: '#ffffff', borderColor: '#d8dac4' }}
+            >
+              <div
+                className="w-7 h-7 rounded-lg flex items-center justify-center shrink-0"
+                style={{ backgroundColor: 'rgba(157,196,14,0.12)' }}
+              >
+                <Icon name={seg.icon} size={14} style={{ color: '#9DC40E' }} />
+              </div>
+              <div className="min-w-0">
+                <p
+                  className="text-[10px] font-bold leading-tight truncate"
+                  style={{ color: '#040404' }}
+                >
+                  {seg.label}
+                </p>
+                {seg.sublabel && (
+                  <p
+                    className="text-[10px] font-bold leading-tight truncate"
+                    style={{ color: '#040404' }}
+                  >
+                    {seg.sublabel}
+                  </p>
+                )}
+              </div>
+            </button>
+          ))}
+        </div>
       </div>
     </section>
   );

@@ -64,13 +64,13 @@ export default function ServicesSection() {
 
         {/* Gallery Grid */}
         {/* Row 1: 1 large + 2 medium */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-3">
           {/* Large card - spans 2 cols, 2 rows */}
           <div
             ref={(el) => {
               cardsRef.current[0] = el;
             }}
-            className="col-span-2 row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer"
+            className="col-span-1 sm:col-span-2 row-span-1 sm:row-span-2 relative rounded-2xl overflow-hidden group cursor-pointer"
             style={{ height: '420px' }}
           >
             <AppImage
@@ -227,7 +227,7 @@ export default function ServicesSection() {
         </div>
 
         {/* Row 2: 3 medium + 1 large */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           {/* Small card 3 */}
           <div
             ref={(el) => {

@@ -22,28 +22,30 @@ export default function TestimonialSection() {
               className="absolute bottom-5 left-5 right-5 rounded-xl p-4 shadow-lg"
               style={{ backgroundColor: 'rgba(245,247,228,0.95)' }}
             >
-              <div className="flex items-center gap-3">
-                <div
-                  className="w-10 h-10 rounded-full overflow-hidden border-2 flex-shrink-0"
-                  style={{ borderColor: 'rgba(157,196,14,0.4)' }}
-                >
-                  <AppImage
-                    src={IMAGES.testimonialHeadshot}
-                    alt="Mustafa K., restaurant owner in Vienna, professional headshot"
-                    width={40}
-                    height={40}
-                    className="object-cover w-full h-full"
-                  />
+              <div className="flex flex-wrap items-center justify-between gap-3">
+                <div className="flex items-center gap-3">
+                  <div
+                    className="w-10 h-10 rounded-full overflow-hidden border-2 flex-shrink-0"
+                    style={{ borderColor: 'rgba(157,196,14,0.4)' }}
+                  >
+                    <AppImage
+                      src={IMAGES.testimonialHeadshot}
+                      alt="Mustafa K., restaurant owner in Vienna, professional headshot"
+                      width={40}
+                      height={40}
+                      className="object-cover w-full h-full"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-bold text-sm" style={{ color: '#040404' }}>
+                      Mustafa K.
+                    </p>
+                    <p className="text-xs" style={{ color: '#575757' }}>
+                      Restaurantbesitzer, Wien 1030
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <p className="font-bold text-sm" style={{ color: '#040404' }}>
-                    Mustafa K.
-                  </p>
-                  <p className="text-xs" style={{ color: '#575757' }}>
-                    Restaurantbesitzer, Wien 1030
-                  </p>
-                </div>
-                <div className="ml-auto flex gap-0.5">
+                <div className="flex gap-0.5">
                   {[...Array(5)]?.map((_, i) => (
                     <Icon
                       key={i}
@@ -91,20 +93,31 @@ export default function TestimonialSection() {
             </div>
 
             {/* Stats row */}
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
               {[
                 { value: '24h', label: 'Reaktionszeit' },
                 { value: '100+', label: 'Betriebe' },
-                { value: '5★', label: 'Bewertung' },
+                { value: '5.0', label: 'Bewertung', isRating: true },
               ]?.map((stat) => (
                 <div
-                  key={stat?.label}
-                  className="text-center p-4 rounded-xl border"
-                  style={{ backgroundColor: '#ffffff', borderColor: '#d8dac4' }}
+                  key={stat.label}
+                  className="bg-[#f8faf2] rounded-xl p-3 border text-center"
+                  style={{ borderColor: '#d8dac4' }}
                 >
-                  <p className="text-2xl font-extrabold" style={{ color: '#040404' }}>
-                    {stat?.value}
-                  </p>
+                  <div className="flex items-center justify-center gap-1">
+                    <p className="text-2xl font-extrabold" style={{ color: '#040404' }}>
+                      {stat?.value}
+                    </p>
+                    {stat.isRating && (
+                      <Icon
+                        name="StarIcon"
+                        size={18}
+                        className="text-[#9DC40E]"
+                        variant="solid"
+                        style={{ marginTop: '-2px' }}
+                      />
+                    )}
+                  </div>
                   <p className="text-xs mt-0.5 font-medium" style={{ color: '#575757' }}>
                     {stat?.label}
                   </p>

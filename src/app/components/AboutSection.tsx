@@ -36,7 +36,7 @@ export default function AboutSection() {
       <div className="mx-auto max-w-7xl px-6">
         <div ref={sectionRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: Photo Grid */}
-          <div className="grid grid-cols-2 gap-3 h-[480px]">
+          <div className="grid grid-cols-2 gap-3 h-[320px] sm:h-[480px]">
             <div className="relative rounded-2xl overflow-hidden row-span-2 img-hover-zoom col-span-1">
               <AppImage
                 src={IMAGES.aboutOwner}
@@ -88,7 +88,7 @@ export default function AboutSection() {
                 className="text-section-title font-extrabold leading-tight"
                 style={{ color: '#040404' }}
               >
-                Was ist der <span style={{ color: '#9DC40E' }}>GASTRO&#8209;KOMPASS?</span>
+                Was ist der <span style={{ color: '#9DC40E' }}>GASTRO-KOMPASS?</span>
               </h2>
               <p className="leading-relaxed text-base" style={{ color: '#575757' }}>
                 Der GASTRO-KOMPASS ist die zentrale Anlaufstelle für Gastronomen in Wien. Wir helfen
@@ -126,7 +126,7 @@ export default function AboutSection() {
               ))}
             </div>
 
-            <div className="flex items-center gap-3 pt-2">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-2">
               <a href="#kontakt" className="btn-primary text-sm">
                 Beratung anfragen
                 <Icon name="ArrowRightIcon" size={16} />
