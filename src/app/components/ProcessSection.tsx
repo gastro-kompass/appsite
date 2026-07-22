@@ -7,29 +7,6 @@ import Icon from '@/components/ui/AppIcon';
 import { PROCESS_STEPS as steps, IMAGES } from '@/config/constants';
 
 export default function ProcessSection() {
-  const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('reveal-visible');
-            entry.target.classList.remove('reveal-hidden');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    stepsRef.current.forEach((el) => {
-      if (el) {
-        el.classList.add('reveal-hidden');
-        observer.observe(el);
-      }
-    });
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section className="py-20 overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
       <div className="mx-auto max-w-7xl px-6">
@@ -58,14 +35,7 @@ export default function ProcessSection() {
             {/* 2x2 Steps Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               {steps.map((step, i) => (
-                <div
-                  key={step.number}
-                  ref={(el) => {
-                    stepsRef.current[i] = el;
-                  }}
-                  className="group"
-                  style={{ transitionDelay: `${i * 100}ms` }}
-                >
+                <div key={step.number} className="group">
                   <div className="flex items-start gap-4">
                     <div className="flex-shrink-0">
                       <span

@@ -3,6 +3,7 @@
 import React from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
+import ScrollRevealGrid from '@/components/ScrollRevealGrid';
 
 import {
   INSURANCE_PARTNERS as insurancePartners,
@@ -43,11 +44,11 @@ export default function PartnersSection() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <ScrollRevealGrid className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {insurancePartners?.map((partner) => (
               <div
                 key={partner?.name}
-                className="group rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-lg"
+                className="group rounded-2xl overflow-hidden border transition-all duration-300 hover:shadow-lg h-full"
                 style={{ backgroundColor: '#ffffff', borderColor: '#d8dac4' }}
               >
                 <div className="relative h-24 overflow-hidden">
@@ -81,7 +82,7 @@ export default function PartnersSection() {
                 </div>
               </div>
             ))}
-          </div>
+          </ScrollRevealGrid>
         </div>
 
         {/* Energy Partners */}
@@ -102,11 +103,11 @@ export default function PartnersSection() {
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+          <ScrollRevealGrid className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
             {energyPartners?.map((partner) => (
               <div
                 key={partner?.name}
-                className="group rounded-2xl overflow-hidden border text-center transition-all duration-300 hover:shadow-md"
+                className="group rounded-2xl overflow-hidden border text-center transition-all duration-300 hover:shadow-md h-full"
                 style={{ backgroundColor: '#ffffff', borderColor: '#d8dac4' }}
               >
                 <div className="relative h-20 overflow-hidden">
@@ -129,7 +130,7 @@ export default function PartnersSection() {
                 </div>
               </div>
             ))}
-          </div>
+          </ScrollRevealGrid>
         </div>
 
         {/* Trust strip */}

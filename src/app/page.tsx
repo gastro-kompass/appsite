@@ -11,21 +11,50 @@ import PartnersSection from '@/app/components/PartnersSection';
 import TestimonialSection from '@/app/components/TestimonialSection';
 import CtaBanner from '@/app/components/CtaBanner';
 import ContactSection from '@/app/components/ContactSection';
+import ScrollReveal from '@/components/ScrollReveal';
 
 export default function HomePage() {
   return (
     <main>
       <Header />
       <HeroSection />
-      <StatsSection />
-      <AboutSection />
-      <CompassSection />
-      <ServicesSection />
-      <ProcessSection />
-      <PartnersSection />
-      <TestimonialSection />
-      <CtaBanner />
-      <ContactSection />
+
+      <ScrollReveal>
+        <StatsSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <AboutSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <CompassSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <ServicesSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <ProcessSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <PartnersSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <TestimonialSection />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <CtaBanner />
+      </ScrollReveal>
+
+      <ScrollReveal>
+        <ContactSection />
+      </ScrollReveal>
+
       <Footer />
     </main>
   );

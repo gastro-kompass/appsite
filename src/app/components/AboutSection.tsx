@@ -4,29 +4,9 @@ import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import { VISION_ITEMS, IMAGES, CONTACT_INFO } from '@/config/constants';
+import ScrollRevealGrid from '@/components/ScrollRevealGrid';
 
 export default function AboutSection() {
-  const sectionRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('reveal-visible');
-            entry.target.classList.remove('reveal-hidden');
-          }
-        });
-      },
-      { threshold: 0.1 }
-    );
-    if (sectionRef.current) {
-      sectionRef.current.classList.add('reveal-hidden');
-      observer.observe(sectionRef.current);
-    }
-    return () => observer.disconnect();
-  }, []);
-
   return (
     <section
       id="ueber-uns"
@@ -34,7 +14,7 @@ export default function AboutSection() {
       style={{ backgroundColor: '#ffffff' }}
     >
       <div className="mx-auto max-w-7xl px-6">
-        <div ref={sectionRef} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
           {/* Left: Photo Grid */}
           <div className="grid grid-cols-2 gap-3 h-[320px] sm:h-[480px]">
             <div className="relative rounded-2xl overflow-hidden row-span-2 img-hover-zoom col-span-1">
@@ -103,11 +83,11 @@ export default function AboutSection() {
             </div>
 
             {/* Vision Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <ScrollRevealGrid className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               {VISION_ITEMS.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-xl p-4 border transition-all duration-200 group"
+                  className="rounded-xl p-4 border transition-all duration-200 group h-full hover:shadow-md"
                   style={{ backgroundColor: '#eef0d8', borderColor: '#d8dac4' }}
                 >
                   <div
@@ -124,7 +104,7 @@ export default function AboutSection() {
                   </p>
                 </div>
               ))}
-            </div>
+            </ScrollRevealGrid>
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-2">
               <a href="#kontakt" className="btn-primary text-sm">

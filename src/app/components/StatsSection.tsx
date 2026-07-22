@@ -2,7 +2,7 @@
 
 import React, { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/ui/AppIcon';
-
+import ScrollRevealGrid from '@/components/ScrollRevealGrid';
 import { STATS_ITEMS as stats, STATS_CATEGORIES as categories } from '@/config/constants';
 
 function CountUp({
@@ -33,16 +33,25 @@ function CountUp({
 
   useEffect(() => {
     if (!started || isText) return;
-    let start = 0;
-    const step = (target / 1800) * 16;
-    const timer = setInterval(() => {
-      start += step;
-      if (start >= target) {
+    let startTimestamp: number | null = null;
+    const duration = 2000; // 2 seconds duration
+    let animationFrameId: number;
+
+    const step = (timestamp: number) => {
+      if (!startTimestamp) startTimestamp = timestamp;
+      const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+      // Quadratic ease-out formula
+      const easeProgress = progress * (2 - progress);
+      setCount(Math.floor(easeProgress * target));
+      if (progress < 1) {
+        animationFrameId = window.requestAnimationFrame(step);
+      } else {
         setCount(target);
-        clearInterval(timer);
-      } else setCount(Math.floor(start));
-    }, 16);
-    return () => clearInterval(timer);
+      }
+    };
+
+    animationFrameId = window.requestAnimationFrame(step);
+    return () => window.cancelAnimationFrame(animationFrameId);
   }, [started, target, isText]);
 
   return (
@@ -81,11 +90,11 @@ export default function StatsSection() {
         </div>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
+        <ScrollRevealGrid className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
           {stats.map((stat) => (
             <div
               key={stat.label}
-              className="rounded-2xl p-4 sm:p-6 border text-center space-y-3 transition-all duration-300"
+              className="rounded-2xl p-4 sm:p-6 border text-center space-y-3 transition-all duration-300 hover:-translate-y-1.5 hover:shadow-lg h-full"
               style={{ backgroundColor: '#ffffff', borderColor: '#d8dac4' }}
             >
               <div
@@ -110,7 +119,7 @@ export default function StatsSection() {
               </div>
             </div>
           ))}
-        </div>
+        </ScrollRevealGrid>
       </div>
     </section>
   );

@@ -176,8 +176,12 @@
 
   .btn-primary:hover {
     background-color: #7aaa18;
-    transform: translateY(-1px);
-    box-shadow: 0 8px 20px rgba(141, 194, 31, 0.35);
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 22px rgba(141, 194, 31, 0.35);
+  }
+
+  .btn-primary:active {
+    transform: translateY(0) scale(0.98);
   }
 
   .btn-outline-white {
@@ -186,7 +190,11 @@
 
   .btn-outline-white:hover {
     background-color: rgba(255, 255, 255, 0.1);
-    transform: translateY(-1px);
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  .btn-outline-white:active {
+    transform: translateY(0) scale(0.98);
   }
 
   .btn-dark {
@@ -197,7 +205,11 @@
 
   .btn-dark:hover {
     background-color: #2d2d2d;
-    transform: translateY(-1px);
+    transform: translateY(-2px) scale(1.02);
+  }
+
+  .btn-dark:active {
+    transform: translateY(0) scale(0.98);
   }
 
   .section-label {

@@ -1,32 +1,46 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import { IMAGES, CONTACT_INFO } from '@/config/constants';
 
 export default function HeroSection() {
-  const textRef = useRef<HTMLDivElement>(null);
+  const containerVariants = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.1,
+        delayChildren: 0.2,
+      },
+    },
+  };
 
-  useEffect(() => {
-    if (!textRef?.current) return;
-    textRef.current.style.opacity = '0';
-    textRef.current.style.transform = 'translateY(24px)';
-    setTimeout(() => {
-      if (!textRef?.current) return;
-      textRef.current.style.transition =
-        'opacity 0.8s cubic-bezier(0.16,1,0.3,1), transform 0.8s cubic-bezier(0.16,1,0.3,1)';
-      textRef.current.style.opacity = '1';
-      textRef.current.style.transform = 'translateY(0)';
-    }, 150);
-  }, []);
+  const cardVariants = {
+    hidden: { opacity: 0, y: 30 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.8,
+        ease: [0.16, 1, 0.3, 1] as const,
+      },
+    },
+  };
 
   return (
     <section className="pt-20 pb-12 overflow-hidden" style={{ backgroundColor: '#ffffff' }}>
       <div className="mx-auto max-w-7xl px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center min-h-[80vh]">
           {/* Left: Text Content */}
-          <div ref={textRef} className="space-y-7 py-8">
+          <motion.div
+            initial={{ opacity: 0, y: 24 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
+            className="space-y-7 py-8"
+          >
             {/* Badge */}
             <span
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest"
@@ -84,12 +98,20 @@ export default function HeroSection() {
                 )
               )}
             </div>
-          </div>
+          </motion.div>
 
           {/* Right: Photo Grid */}
-          <div className="relative grid grid-cols-1 sm:grid-cols-2 gap-4 h-auto sm:h-[520px] lg:h-[580px]">
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            animate="show"
+            className="relative grid grid-cols-1 sm:grid-cols-2 gap-4 h-auto sm:h-[520px] lg:h-[580px]"
+          >
             {/* Large top-left image */}
-            <div className="relative rounded-2xl overflow-hidden img-hover-zoom h-60 sm:h-auto">
+            <motion.div
+              variants={cardVariants}
+              className="relative rounded-2xl overflow-hidden img-hover-zoom h-60 sm:h-auto"
+            >
               <AppImage
                 src={IMAGES.heroImage1}
                 alt="Elegant restaurant interior with warm lighting and set tables in Vienna"
@@ -109,10 +131,11 @@ export default function HeroSection() {
                   Wien & Österreich
                 </p>
               </div>
-            </div>
+            </motion.div>
 
             {/* Top-right: green accent card */}
-            <div
+            <motion.div
+              variants={cardVariants}
               className="relative rounded-2xl overflow-hidden flex flex-col justify-between p-5 h-56 sm:h-auto"
               style={{ backgroundColor: '#9DC40E' }}
             >
@@ -139,10 +162,11 @@ export default function HeroSection() {
                   </div>
                 ))}
               </div>
-            </div>
+            </motion.div>
 
             {/* Bottom-left: stats card */}
-            <div
+            <motion.div
+              variants={cardVariants}
               className="relative rounded-2xl p-5 flex flex-col justify-between h-48 sm:h-auto"
               style={{ backgroundColor: '#9DC40E' }}
             >
@@ -166,10 +190,13 @@ export default function HeroSection() {
                   </p>
                 </div>
               </div>
-            </div>
+            </motion.div>
 
             {/* Bottom-right: photo */}
-            <div className="relative rounded-2xl overflow-hidden img-hover-zoom h-60 sm:h-auto">
+            <motion.div
+              variants={cardVariants}
+              className="relative rounded-2xl overflow-hidden img-hover-zoom h-60 sm:h-auto"
+            >
               <AppImage
                 src={IMAGES.heroImage2}
                 alt="Professional chef in modern restaurant kitchen preparing gourmet dishes"
@@ -184,8 +211,8 @@ export default function HeroSection() {
               >
                 <p className="text-white text-xs font-bold">{CONTACT_INFO.wkoPartnerLabel}</p>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </section>

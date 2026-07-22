@@ -3,32 +3,11 @@
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
-
+import ScrollRevealGrid from '@/components/ScrollRevealGrid';
 import { SERVICES_LIST as services } from '@/config/constants';
 
 export default function ServicesSection() {
   const cardsRef = useRef<(HTMLDivElement | null)[]>([]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('reveal-visible');
-            entry.target.classList.remove('reveal-hidden');
-          }
-        });
-      },
-      { threshold: 0.06 }
-    );
-    cardsRef.current.forEach((card) => {
-      if (card) {
-        card.classList.add('reveal-hidden');
-        observer.observe(card);
-      }
-    });
-    return () => observer.disconnect();
-  }, []);
 
   return (
     <section
@@ -64,7 +43,7 @@ export default function ServicesSection() {
 
         {/* Gallery Grid */}
         {/* Row 1: 1 large + 2 medium */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-3">
+        <ScrollRevealGrid className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3 mb-3">
           {/* Large card - spans 2 cols, 2 rows */}
           <div
             ref={(el) => {
@@ -224,10 +203,10 @@ export default function ServicesSection() {
               </div>
             </div>
           </div>
-        </div>
+        </ScrollRevealGrid>
 
         {/* Row 2: 3 medium + 1 large */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
+        <ScrollRevealGrid className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-3">
           {/* Small card 3 */}
           <div
             ref={(el) => {
@@ -347,7 +326,7 @@ export default function ServicesSection() {
               </a>
             </div>
           </div>
-        </div>
+        </ScrollRevealGrid>
 
         {/* Bottom CTA */}
         <div className="mt-8 text-center">
