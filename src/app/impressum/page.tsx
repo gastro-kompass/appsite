@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
+import Footer from '@/components/Footer';
 
 export default function ImpressumPage() {
   return (
@@ -112,7 +113,7 @@ export default function ImpressumPage() {
               <div>
                 <p className="text-xs text-gray-500 font-medium">Website</p>
                 <a
-                  href="https://gastrokomp5132.builtwithrocket.new"
+                  href="https://www.gastrokompass.at"
                   className="text-[#1A1A1A] font-semibold hover:text-[#8DC21F] transition-colors"
                 >
                   www.gastrokompass.at
@@ -222,6 +223,7 @@ export default function ImpressumPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

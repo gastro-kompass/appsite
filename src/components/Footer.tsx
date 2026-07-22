@@ -3,6 +3,7 @@
 import React from 'react';
 import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
+import { CONTACT_INFO, IMAGES } from '@/config/constants';
 
 export default function Footer() {
   return (
@@ -15,11 +16,7 @@ export default function Footer() {
           {/* Logo + Tagline */}
           <div className="md:col-span-2 space-y-4">
             <div className="flex items-center gap-2">
-              <AppLogo
-                src="/assets/images/logo.jpeg"
-                size={40}
-                className="rounded-full overflow-hidden"
-              />
+              <AppLogo src={IMAGES.logo} size={40} className="rounded-full overflow-hidden" />
               <span className="font-extrabold text-lg" style={{ color: '#040404' }}>
                 GASTRO<span style={{ color: '#9DC40E' }}>KOMPASS</span>
               </span>
@@ -93,7 +90,7 @@ export default function Footer() {
                   style={{ color: '#9DC40E' }}
                   className="shrink-0 mt-0.5"
                 />
-                Döblinger Straße 82/2a, 1190 Wien
+                {CONTACT_INFO.address}
               </li>
               <li className="flex items-center gap-2 text-sm" style={{ color: '#575757' }}>
                 <Icon
@@ -102,8 +99,8 @@ export default function Footer() {
                   style={{ color: '#9DC40E' }}
                   className="shrink-0"
                 />
-                <a href="tel:+436607676484" className="hover:text-[#9DC40E] transition-colors">
-                  +43 660 7676484
+                <a href={CONTACT_INFO.phoneLink} className="hover:text-[#9DC40E] transition-colors">
+                  {CONTACT_INFO.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2 text-sm" style={{ color: '#575757' }}>
@@ -113,8 +110,11 @@ export default function Footer() {
                   style={{ color: '#9DC40E' }}
                   className="shrink-0"
                 />
-                <a href="mailto:info@gastrokompass.at" className="hover:text-[#9DC40E] transition-colors">
-                  info@gastrokompass.at
+                <a
+                  href={`mailto:${CONTACT_INFO.email}`}
+                  className="hover:text-[#9DC40E] transition-colors"
+                >
+                  {CONTACT_INFO.email}
                 </a>
               </li>
             </ul>

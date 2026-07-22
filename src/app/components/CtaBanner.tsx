@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from '@/components/ui/AppIcon';
+import { CONTACT_INFO } from '@/config/constants';
 
 export default function CtaBanner() {
   return (
@@ -44,7 +45,7 @@ export default function CtaBanner() {
                 Jetzt anfragen
               </a>
               <a
-                href="https://wa.me/436607676484"
+                href={CONTACT_INFO.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border-2 border-white/30 text-white font-bold text-sm hover:bg-white/10 transition-all duration-200"

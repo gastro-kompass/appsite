@@ -1,120 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-
-interface CompassSegment {
-  id: string;
-  label: string;
-  sublabel?: string;
-  href: string;
-  angle: number; // center angle in degrees (0 = top)
-  iconPath: string;
-  color: string;
-}
-
-const segments: CompassSegment[] = [
-  {
-    id: 'standort',
-    label: 'Standort &',
-    sublabel: 'Lokalfindung',
-    href: '#leistungen',
-    angle: -67.5,
-    iconPath:
-      'M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z',
-    color: '#9DC40E',
-  },
-  {
-    id: 'gruendung',
-    label: 'Gründung &',
-    sublabel: 'Rechtsform',
-    href: '#leistungen',
-    angle: -22.5,
-    iconPath: 'M4 6h16v2H4zm0 5h16v2H4zm0 5h16v2H4zM2 3h20v18H2V3zm2 2v14h16V5H4z',
-    color: '#7ab80d',
-  },
-  {
-    id: 'foerderungen',
-    label: 'Förderungen &',
-    sublabel: 'Finanzierung',
-    href: '#leistungen',
-    angle: 22.5,
-    iconPath:
-      'M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z',
-    color: '#5a9e0a',
-  },
-  {
-    id: 'genehmigung',
-    label: 'Betriebsanlagen-',
-    sublabel: 'Genehmigung',
-    href: '#leistungen',
-    angle: 67.5,
-    iconPath:
-      'M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z',
-    color: '#9DC40E',
-  },
-  {
-    id: 'kassensysteme',
-    label: 'Kassensysteme',
-    sublabel: '& Payment',
-    href: '#leistungen',
-    angle: 112.5,
-    iconPath:
-      'M20 4H4c-1.11 0-2 .89-2 2v12c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V6c0-1.11-.89-2-2-2zm0 14H4v-6h16v6zm0-10H4V6h16v2z',
-    color: '#7ab80d',
-  },
-  {
-    id: 'steuer',
-    label: 'Steuerliche',
-    sublabel: 'Betreuung',
-    href: '#leistungen',
-    angle: 157.5,
-    iconPath:
-      'M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-7 3c1.93 0 3.5 1.57 3.5 3.5S13.93 13 12 13s-3.5-1.57-3.5-3.5S10.07 6 12 6zm7 13H5v-.23c0-.62.28-1.2.76-1.58C7.47 15.82 9.64 15 12 15s4.53.82 6.24 2.19c.48.38.76.97.76 1.58V19z',
-    color: '#5a9e0a',
-  },
-  {
-    id: 'ausstattung',
-    label: 'Ausstattung',
-    sublabel: '& Bau',
-    href: '#leistungen',
-    angle: 202.5,
-    iconPath:
-      'M22.7 19l-9.1-9.1c.9-2.3.4-5-1.5-6.9-2-2-5-2.4-7.4-1.3L9 6 6 9 1.6 4.7C.4 7.1.9 10.1 2.9 12.1c1.9 1.9 4.6 2.4 6.9 1.5l9.1 9.1c.4.4 1 .4 1.4 0l2.3-2.3c.5-.4.5-1.1.1-1.4z',
-    color: '#9DC40E',
-  },
-  {
-    id: 'marketing',
-    label: 'Marketing &',
-    sublabel: 'Digitale Präsenz',
-    href: '#leistungen',
-    angle: 247.5,
-    iconPath:
-      'M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z',
-    color: '#7ab80d',
-  },
-  {
-    id: 'rundum',
-    label: 'Rundum-',
-    sublabel: 'Paket',
-    href: '#leistungen',
-    angle: 292.5,
-    iconPath:
-      'M20 6h-2.18c.07-.44.18-.88.18-1.36C18 2.53 15.47 0 12.36 0c-1.73 0-3.24.87-4.17 2.19L12 6H20zm-7.64 0H6L3.27 2.19C2.34.87.83 0-.9 0-4.01 0-6.54 2.53-6.54 4.64c0 .48.11.92.18 1.36H-8.54v14c0 1.1.9 2 2 2h17.08c1.1 0 2-.9 2-2V6h-2.18z',
-    color: '#5a9e0a',
-  },
-];
-
-// Extra segments for outer ring
-const extraSegments = [
-  {
-    id: 'versicherungen',
-    label: 'Versicherungen',
-    sublabel: '(Best-Preis)',
-    href: '#partner',
-    angle: 270,
-  },
-  { id: 'strom', label: 'Stromanbieter', sublabel: '(Best-Preis)', href: '#partner', angle: 315 },
-];
+import { COMPASS_SEGMENTS as segments } from '@/config/constants';
+import Icon from '@/components/ui/AppIcon';
+import { ChefHat } from 'lucide-react';
 
 function polarToCartesian(cx: number, cy: number, r: number, angleDeg: number) {
   const rad = ((angleDeg - 90) * Math.PI) / 180;
@@ -357,13 +246,14 @@ export default function CompassSection() {
                           fill={isHovered ? '#9DC40E' : '#eef5cc'}
                           style={{ transition: 'all 0.2s ease' }}
                         />
-                        <svg viewBox="0 0 24 24" width="24" height="24">
-                          <path
-                            d={seg.iconPath}
-                            fill={isHovered ? '#ffffff' : '#7ab80d'}
+                        <g transform="translate(4, 4)">
+                          <Icon
+                            name={seg.icon}
+                            size={16}
+                            className={isHovered ? 'text-white' : 'text-[#7ab80d]'}
                             style={{ transition: 'all 0.2s ease' }}
                           />
-                        </svg>
+                        </g>
                       </g>
 
                       {/* Label line 1 — below icon */}
@@ -480,19 +370,8 @@ export default function CompassSection() {
               <circle cx={cx} cy={cy} r="48" fill="none" stroke="#d4e090" strokeWidth="1" />
 
               {/* Chef hat icon in center */}
-              <g transform={`translate(${cx - 14}, ${cy - 32})`}>
-                <svg viewBox="0 0 28 28" width="28" height="28">
-                  <path
-                    d="M14 2C10.69 2 8 4.69 8 8c0 1.48.54 2.83 1.42 3.87L8 20h16l-1.42-8.13C23.46 10.83 24 9.48 24 8c0-3.31-2.69-6-6-6h-4z"
-                    fill="#9DC40E"
-                  />
-                  <rect x="8" y="20" width="16" height="3" rx="1.5" fill="#7ab80d" />
-                  <path
-                    d="M11 8.5c0-.83.67-1.5 1.5-1.5s1.5.67 1.5 1.5-.67 1.5-1.5 1.5S11 9.33 11 8.5z"
-                    fill="white"
-                    opacity="0.6"
-                  />
-                </svg>
+              <g transform={`translate(${cx - 14}, ${cy - 32})`} className="text-[#9DC40E]">
+                <ChefHat size={28} strokeWidth={1.5} />
               </g>
 
               {/* Center text */}

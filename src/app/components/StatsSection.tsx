@@ -3,49 +3,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import Icon from '@/components/ui/AppIcon';
 
-const stats = [
-  {
-    value: 9,
-    suffix: '+',
-    label: 'Leistungsbereiche',
-    icon: 'Squares2X2Icon' as const,
-    desc: 'Spezialisierte Bereiche',
-  },
-  {
-    value: 100,
-    suffix: '+',
-    label: 'Partnerbetriebe',
-    icon: 'BuildingOffice2Icon' as const,
-    desc: 'Starke Kooperationen',
-  },
-  {
-    value: 0,
-    suffix: '',
-    label: 'Wien & Österreich',
-    icon: 'MapPinIcon' as const,
-    desc: 'Ihr Einzugsgebiet',
-    isText: true,
-    textValue: 'Wien',
-  },
-  {
-    value: 0,
-    suffix: '',
-    label: 'WKO-Partner',
-    icon: 'ShieldCheckIcon' as const,
-    desc: 'Offiziell zertifiziert',
-    isText: true,
-    textValue: 'WKO',
-  },
-];
-
-const categories = [
-  { label: 'Alle Leistungen', href: '#leistungen' },
-  { label: 'Gründung', href: '#leistungen' },
-  { label: 'Finanzen', href: '#leistungen' },
-  { label: 'Marketing', href: '#leistungen' },
-  { label: 'Versicherung', href: '#partner' },
-  { label: 'Energie', href: '#partner' },
-];
+import { STATS_ITEMS as stats, STATS_CATEGORIES as categories } from '@/config/constants';
 
 function CountUp({
   target,

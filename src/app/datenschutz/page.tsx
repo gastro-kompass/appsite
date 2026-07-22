@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
+import Footer from '@/components/Footer';
 
 const sections = [
   {
@@ -174,7 +175,6 @@ export default function DatenschutzPage() {
           </div>
         </div>
 
-        {/* Back link */}
         <div className="pt-4 border-t border-gray-100">
           <Link
             href="/"
@@ -185,6 +185,7 @@ export default function DatenschutzPage() {
           </Link>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

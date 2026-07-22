@@ -3,24 +3,11 @@
 import React, { useState } from 'react';
 import Icon from '@/components/ui/AppIcon';
 
-const serviceOptions = [
-  'Standort & Lokalfindung',
-  'Gründung & Rechtsform',
-  'Förderungen & Finanzierung',
-  'Betriebsanlagengenehmigung',
-  'Registrierkasse & Payment',
-  'Steuerliche Expertise',
-  'Ausstattung & Bau',
-  'Marketing & Digitale Präsenz',
-  'Das Rundum-Paket',
-  'Sonstiges',
-];
-
-const officeHours = [
-  { day: 'Mo – Do', hours: '09:00 – 18:00 Uhr' },
-  { day: 'Fr', hours: '09:00 – 15:00 Uhr' },
-  { day: 'Sa – So', hours: 'Geschlossen' },
-];
+import {
+  SERVICE_OPTIONS as serviceOptions,
+  OFFICE_HOURS as officeHours,
+  CONTACT_INFO,
+} from '@/config/constants';
 
 export default function ContactSection() {
   const [formData, setFormData] = useState({
@@ -82,7 +69,7 @@ export default function ContactSection() {
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
                 <h3 className="font-bold text-foreground text-lg mb-2">Anfrage senden</h3>
-                
+
                 {/* Row 1: Firmenname & Name */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div className="space-y-1.5">
@@ -266,7 +253,7 @@ export default function ContactSection() {
 
             {/* WhatsApp CTA */}
             <a
-              href="https://wa.me/436607676484"
+              href={CONTACT_INFO.whatsappLink}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-between gap-3 px-5 py-4 rounded-2xl bg-primary text-white font-bold hover:bg-primary/90 transition-all duration-200 group"

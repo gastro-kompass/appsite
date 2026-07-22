@@ -3,29 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
-
-const visionItems = [
-  {
-    icon: 'ShieldCheckIcon' as const,
-    title: 'Bürokratie-Entlastung',
-    text: 'Wir navigieren durch alle behördlichen Anforderungen.',
-  },
-  {
-    icon: 'StarIcon' as const,
-    title: 'Fokus auf Gastronomie',
-    text: 'Ihr Kerngeschäft steht im Mittelpunkt.',
-  },
-  {
-    icon: 'MapIcon' as const,
-    title: 'Strukturierte Orientierung',
-    text: 'Klare Schritte, starke Partner.',
-  },
-  {
-    icon: 'BuildingStorefrontIcon' as const,
-    title: 'Exklusiv für Gastro',
-    text: 'Spezialisiert auf Wien & Österreich.',
-  },
-];
+import { VISION_ITEMS, IMAGES, CONTACT_INFO } from '@/config/constants';
 
 export default function AboutSection() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -61,7 +39,7 @@ export default function AboutSection() {
           <div className="grid grid-cols-2 gap-3 h-[480px]">
             <div className="relative rounded-2xl overflow-hidden row-span-2 img-hover-zoom col-span-1">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_11d99a589-1780463477375.png"
+                src={IMAGES.aboutOwner}
                 alt="Confident restaurant owner standing in modern Vienna gastronomy setting"
                 fill
                 className="object-cover"
@@ -73,13 +51,13 @@ export default function AboutSection() {
                   className="inline-block text-white text-xs font-bold px-3 py-1.5 rounded-lg"
                   style={{ backgroundColor: '#9DC40E' }}
                 >
-                  WKO Wien Partner
+                  {CONTACT_INFO.wkoPartnerLabel}
                 </span>
               </div>
             </div>
             <div className="relative rounded-2xl overflow-hidden img-hover-zoom">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_133b1e7cf-1768750078214.png"
+                src={IMAGES.aboutOffice}
                 alt="Business consultation meeting in modern office environment"
                 fill
                 className="object-cover"
@@ -96,9 +74,7 @@ export default function AboutSection() {
               </p>
               <div className="flex gap-1 mt-3">
                 {[...Array(5)].map((_, i) => (
-                  <svg key={i} className="w-3.5 h-3.5" fill="white" viewBox="0 0 20 20">
-                    <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                  </svg>
+                  <Icon key={i} name="StarIcon" size={14} className="text-white" variant="solid" />
                 ))}
               </div>
             </div>
@@ -128,7 +104,7 @@ export default function AboutSection() {
 
             {/* Vision Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-              {visionItems.map((item) => (
+              {VISION_ITEMS.map((item) => (
                 <div
                   key={item.title}
                   className="rounded-xl p-4 border transition-all duration-200 group"

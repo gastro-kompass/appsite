@@ -3,6 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
+import { IMAGES, CONTACT_INFO } from '@/config/constants';
 
 export default function HeroSection() {
   const textRef = useRef<HTMLDivElement>(null);
@@ -32,7 +33,7 @@ export default function HeroSection() {
               style={{ backgroundColor: 'rgba(157,196,14,0.12)', color: '#9DC40E' }}
             >
               <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#9DC40E' }} />
-              WKO Wien Partner
+              {CONTACT_INFO.wkoPartnerLabel}
             </span>
 
             {/* Headline */}
@@ -90,7 +91,7 @@ export default function HeroSection() {
             {/* Large top-left image */}
             <div className="relative rounded-2xl overflow-hidden row-span-1 img-hover-zoom">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_1a7c4632f-1772478771701.png"
+                src={IMAGES.heroImage1}
                 alt="Elegant restaurant interior with warm lighting and set tables in Vienna"
                 fill
                 className="object-cover"
@@ -170,7 +171,7 @@ export default function HeroSection() {
             {/* Bottom-right: photo */}
             <div className="relative rounded-2xl overflow-hidden img-hover-zoom">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_1a44f4ca3-1772103292622.png"
+                src={IMAGES.heroImage2}
                 alt="Professional chef in modern restaurant kitchen preparing gourmet dishes"
                 fill
                 className="object-cover"
@@ -181,7 +182,7 @@ export default function HeroSection() {
                 className="absolute top-3 right-3 rounded-lg px-2.5 py-1.5"
                 style={{ backgroundColor: '#9DC40E' }}
               >
-                <p className="text-white text-xs font-bold">WKO Partner</p>
+                <p className="text-white text-xs font-bold">{CONTACT_INFO.wkoPartnerLabel}</p>
               </div>
             </div>
           </div>

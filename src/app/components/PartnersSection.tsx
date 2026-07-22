@@ -4,67 +4,10 @@ import React from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
-const insurancePartners = [
-  {
-    name: 'Allianz',
-    desc: 'Betriebshaftpflicht & Gewerbeversicherung',
-    logo: 'https://images.unsplash.com/photo-1588440925730-962768a4a36b',
-    logoAlt: 'Modern office building representing Allianz insurance company',
-    benefit: 'Exklusivkonditionen für Gastronomiebetriebe',
-  },
-  {
-    name: 'UNIQA',
-    desc: 'Betriebshaftpflicht & Sachversicherung',
-    logo: 'https://images.unsplash.com/photo-1670877127452-e113e18eb70d',
-    logoAlt: 'Glass office building representing UNIQA insurance',
-    benefit: 'Sonderrabatte für WKO-Mitglieder',
-  },
-  {
-    name: 'Wiener Städtische',
-    desc: 'Vollschutz für Gastronomie',
-    logo: 'https://img.rocket.new/generatedImages/rocket_gen_img_1c2220116-1780464186586.png',
-    logoAlt: 'Vienna city skyline representing Wiener Städtische insurance',
-    benefit: 'Maßgeschneiderte Gastro-Pakete',
-  },
-];
-
-const energyPartners = [
-  {
-    name: 'Verbund',
-    desc: '100% Ökostrom',
-    logo: 'https://img.rocket.new/generatedImages/rocket_gen_img_1e25eca2d-1780464920173.png',
-    logoAlt: 'Wind turbines representing Verbund renewable energy',
-    benefit: 'Grünstrom zu Gewerbepreisen',
-  },
-  {
-    name: 'Kelag',
-    desc: 'Gewerbestrom Wien',
-    logo: 'https://img.rocket.new/generatedImages/rocket_gen_img_113a0ea00-1780464918162.png',
-    logoAlt: 'Hydroelectric power plant representing Kelag energy',
-    benefit: 'Günstige Gewerbekonditionen',
-  },
-  {
-    name: 'Montana',
-    desc: 'Gastronomie-Energietarif',
-    logo: 'https://img.rocket.new/generatedImages/rocket_gen_img_1fa9a9ec0-1780464918684.png',
-    logoAlt: 'Solar panels representing Montana energy solutions',
-    benefit: 'Spezialtarif für Gastrobetriebe',
-  },
-  {
-    name: 'Gekko-Strom',
-    desc: 'Günstig & grün',
-    logo: 'https://img.rocket.new/generatedImages/rocket_gen_img_157ffc926-1767558611545.png',
-    logoAlt: 'Green energy concept with solar panels',
-    benefit: 'Niedrigste Kilowattpreise',
-  },
-  {
-    name: 'ÖKO-Strom',
-    desc: '100% Erneuerbare Energie',
-    logo: 'https://img.rocket.new/generatedImages/rocket_gen_img_1c6190963-1772625025316.png',
-    logoAlt: 'Wind turbines at sunset representing ÖKO-Strom',
-    benefit: 'Zertifizierter Ökostrom',
-  },
-];
+import {
+  INSURANCE_PARTNERS as insurancePartners,
+  ENERGY_PARTNERS as energyPartners,
+} from '@/config/constants';
 
 export default function PartnersSection() {
   return (

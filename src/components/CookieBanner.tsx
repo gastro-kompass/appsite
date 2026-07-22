@@ -39,14 +39,16 @@ export default function CookieBanner() {
               Cookie-Einstellungen
             </h4>
             <p className="text-white/70 text-xs leading-relaxed">
-              Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Einige sind technisch notwendig, während andere uns helfen, diese Website zu optimieren. Weitere Informationen finden Sie in unserer{' '}
+              Wir verwenden Cookies, um Ihre Erfahrung auf unserer Website zu verbessern. Einige
+              sind technisch notwendig, während andere uns helfen, diese Website zu optimieren.
+              Weitere Informationen finden Sie in unserer{' '}
               <Link href="/datenschutz" className="text-[#9DC40E] hover:underline font-semibold">
                 Datenschutzerklärung
               </Link>
               .
             </p>
           </div>
-          
+
           <div className="flex flex-col sm:flex-row gap-2.5 pt-2">
             <button
               onClick={handleAccept}

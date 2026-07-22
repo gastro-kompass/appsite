@@ -4,32 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 
-const steps = [
-  {
-    number: '01',
-    icon: 'ChatBubbleLeftRightIcon' as const,
-    title: 'Erstgespräch',
-    description: 'Kostenlose Beratung — wir verstehen Ihre Ziele.',
-  },
-  {
-    number: '02',
-    icon: 'MagnifyingGlassIcon' as const,
-    title: 'Analyse & Planung',
-    description: 'Maßgeschneiderter Aktionsplan mit klaren Meilensteinen.',
-  },
-  {
-    number: '03',
-    icon: 'RocketLaunchIcon' as const,
-    title: 'Umsetzung',
-    description: 'Wir koordinieren Behörden, Anbieter und Dienstleister.',
-  },
-  {
-    number: '04',
-    icon: 'ArrowPathIcon' as const,
-    title: 'Laufende Begleitung',
-    description: 'Langfristige Partnerschaft für nachhaltiges Wachstum.',
-  },
-];
+import { PROCESS_STEPS as steps, IMAGES } from '@/config/constants';
 
 export default function ProcessSection() {
   const stepsRef = useRef<(HTMLDivElement | null)[]>([]);
@@ -131,7 +106,7 @@ export default function ProcessSection() {
           <div className="grid grid-cols-2 gap-3 h-[420px]">
             <div className="relative rounded-2xl overflow-hidden img-hover-zoom row-span-2">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_12f48a20c-1780463476490.png"
+                src={IMAGES.processImage1}
                 alt="Business consultation meeting with gastronomy entrepreneur and advisor"
                 fill
                 className="object-cover"
@@ -141,7 +116,7 @@ export default function ProcessSection() {
             </div>
             <div className="relative rounded-2xl overflow-hidden img-hover-zoom">
               <AppImage
-                src="https://img.rocket.new/generatedImages/rocket_gen_img_172ffeb4d-1768068550256.png"
+                src={IMAGES.processImage2}
                 alt="Successful business handshake after consulting agreement"
                 fill
                 className="object-cover"

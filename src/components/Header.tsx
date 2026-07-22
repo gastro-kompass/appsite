@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import AppLogo from '@/components/ui/AppLogo';
 import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
+import { IMAGES } from '@/config/constants';
 
 const navLinks = [
   { label: 'Leistungen', href: '#leistungen' },
@@ -44,7 +45,7 @@ export default function Header() {
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2 group">
             <AppLogo
-              src="/assets/images/logo.jpeg"
+              src={IMAGES.logo}
               size={40}
               className="rounded-full overflow-hidden transition-transform group-hover:scale-105"
             />
