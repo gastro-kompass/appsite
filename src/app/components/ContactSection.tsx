@@ -19,6 +19,8 @@ export default function ContactSection() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -26,9 +28,43 @@ export default function ContactSection() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
+    setSubmitting(true);
+    setError(null);
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (!response.ok) {
+        throw new Error(data.error || 'Etwas ist schiefgelaufen.');
+      }
+
+      setSubmitted(true);
+      setFormData({
+        company: '',
+        name: '',
+        email: '',
+        phone: '',
+        bereich: '',
+        message: '',
+      });
+    } catch (err: any) {
+      setError(
+        err.message ||
+          'Es gab ein Problem beim Senden Ihrer Anfrage. Bitte versuchen Sie es später noch einmal.'
+      );
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -167,12 +203,22 @@ export default function ContactSection() {
                     className="w-full px-4 py-3 rounded-xl border border-border bg-white text-foreground text-sm placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary transition-all resize-none"
                   />
                 </div>
+                {error && (
+                  <p className="text-xs text-red-500 bg-red-500/10 p-3 rounded-lg border border-red-500/20">
+                    {error}
+                  </p>
+                )}
                 <button
                   type="submit"
-                  className="btn-primary w-full justify-center py-3.5 text-sm font-bold"
+                  disabled={submitting}
+                  className="btn-primary w-full justify-center py-3.5 text-sm font-bold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  <Icon name="PaperAirplaneIcon" size={16} />
-                  Jetzt Anfrage senden
+                  <Icon
+                    name={submitting ? 'ArrowPathIcon' : 'PaperAirplaneIcon'}
+                    size={16}
+                    className={submitting ? 'animate-spin' : ''}
+                  />
+                  {submitting ? 'Wird gesendet...' : 'Jetzt Anfrage senden'}
                 </button>
                 <p className="text-xs text-muted-foreground text-center">
                   Mit dem Absenden stimmen Sie unserer{' '}
