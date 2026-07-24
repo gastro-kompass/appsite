@@ -46,7 +46,7 @@ export default function Header() {
           <Link href="/" className="flex items-center gap-2 group">
             <AppLogo
               src={IMAGES.logo}
-              size={40}
+              size={60}
               className="rounded-full overflow-hidden transition-transform group-hover:scale-105"
             />
             <span
