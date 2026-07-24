@@ -71,7 +71,7 @@ export default function StatsSection() {
     >
       <div className="mx-auto max-w-7xl px-6 space-y-10">
         {/* Category Pills */}
-        <div className="flex flex-wrap gap-2 justify-center">
+        {/* <div className="flex flex-wrap gap-2 justify-center">
           {categories.map((cat, i) => (
             <a
               key={cat.label}
@@ -87,7 +87,7 @@ export default function StatsSection() {
               {cat.label}
             </a>
           ))}
-        </div>
+        </div> */}
 
         {/* Stats Grid */}
         <ScrollRevealGrid className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
