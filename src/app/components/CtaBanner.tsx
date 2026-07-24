@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 import { CONTACT_INFO } from '@/config/constants';
 
@@ -36,14 +37,14 @@ export default function CtaBanner() {
             </div>
 
             <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
-              <a
+              <Link
                 href="#kontakt"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm transition-all duration-200 shadow-sm hover:opacity-90"
                 style={{ backgroundColor: '#ffffff', color: '#040404' }}
               >
                 <Icon name="ArrowRightCircleIcon" size={18} />
                 Jetzt anfragen
-              </a>
+              </Link>
               <a
                 href={CONTACT_INFO.whatsappLink}
                 target="_blank"

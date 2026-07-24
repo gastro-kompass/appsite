@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 
 import {
@@ -222,9 +223,9 @@ export default function ContactSection() {
                 </button>
                 <p className="text-xs text-muted-foreground text-center">
                   Mit dem Absenden stimmen Sie unserer{' '}
-                  <a href="/datenschutz" className="text-primary hover:underline">
+                  <Link href="/datenschutz" className="text-primary hover:underline">
                     Datenschutzerklärung
-                  </a>{' '}
+                  </Link>{' '}
                   zu.
                 </p>
               </form>

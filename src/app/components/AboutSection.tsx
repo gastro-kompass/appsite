@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 import { VISION_ITEMS, IMAGES, CONTACT_INFO } from '@/config/constants';
 import ScrollRevealGrid from '@/components/ScrollRevealGrid';
@@ -107,10 +108,10 @@ export default function AboutSection() {
             </ScrollRevealGrid>
 
             <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-2">
-              <a href="#kontakt" className="btn-primary text-sm">
+              <Link href="#kontakt" className="btn-primary text-sm">
                 Beratung anfragen
                 <Icon name="ArrowRightIcon" size={16} />
-              </a>
+              </Link>
               <span className="text-xs font-medium" style={{ color: '#575757' }}>
                 Kostenlose Erstberatung
               </span>

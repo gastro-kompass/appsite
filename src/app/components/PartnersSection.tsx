@@ -2,6 +2,7 @@
 
 import React from 'react';
 import AppImage from '@/components/ui/AppImage';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 import ScrollRevealGrid from '@/components/ScrollRevealGrid';
 
@@ -157,14 +158,14 @@ export default function PartnersSection() {
               </p>
             </div>
           </div>
-          <a
+          <Link
             href="#kontakt"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm transition-colors whitespace-nowrap shrink-0 hover:opacity-90"
             style={{ backgroundColor: '#ffffff', color: '#040404' }}
           >
             Angebote anfragen
             <Icon name="ArrowRightIcon" size={16} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>

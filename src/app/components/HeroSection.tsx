@@ -2,6 +2,7 @@
 
 import React from 'react';
 import { motion } from 'framer-motion';
+import Link from 'next/link';
 import AppImage from '@/components/ui/AppImage';
 import Icon from '@/components/ui/AppIcon';
 import { IMAGES, CONTACT_INFO } from '@/config/constants';
@@ -64,18 +65,18 @@ export default function HeroSection() {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-3">
-              <a href="#kontakt" className="btn-primary text-sm px-7 py-3.5">
+              <Link href="#kontakt" className="btn-primary text-sm px-7 py-3.5">
                 <Icon name="ChatBubbleLeftRightIcon" size={18} />
                 Jetzt Beratung anfragen
-              </a>
-              <a
+              </Link>
+              <Link
                 href="#leistungen"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-lg border-2 font-semibold text-sm transition-all duration-200"
                 style={{ borderColor: '#d8dac4', color: '#040404' }}
               >
                 Unsere Leistungen
                 <Icon name="ArrowRightIcon" size={16} />
-              </a>
+              </Link>
             </div>
 
             {/* Trust pills */}

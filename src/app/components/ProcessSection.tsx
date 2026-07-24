@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 
 import { PROCESS_STEPS as steps, IMAGES } from '@/config/constants';
@@ -66,10 +67,10 @@ export default function ProcessSection() {
               ))}
             </div>
 
-            <a href="#kontakt" className="btn-primary text-sm inline-flex">
+            <Link href="#kontakt" className="btn-primary text-sm inline-flex">
               Jetzt starten
               <Icon name="ArrowRightIcon" size={16} />
-            </a>
+            </Link>
           </div>
 
           {/* Right: Photo collage */}

@@ -1,5 +1,6 @@
 import React from 'react';
 import AppImage from '@/components/ui/AppImage';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 import { IMAGES } from '@/config/constants';
 
@@ -125,10 +126,10 @@ export default function TestimonialSection() {
               ))}
             </div>
 
-            <a href="#kontakt" className="btn-primary text-sm inline-flex">
+            <Link href="#kontakt" className="btn-primary text-sm inline-flex">
               <Icon name="ChatBubbleLeftRightIcon" size={16} />
               Jetzt Beratung anfragen
-            </a>
+            </Link>
           </div>
         </div>
       </div>

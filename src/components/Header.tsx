@@ -7,10 +7,10 @@ import Icon from '@/components/ui/AppIcon';
 import { IMAGES } from '@/config/constants';
 
 const navLinks = [
-  { label: 'Leistungen', href: '#leistungen' },
-  { label: 'Über uns', href: '#ueber-uns' },
-  { label: 'Partner', href: '#partner' },
-  { label: 'Kontakt', href: '#kontakt' },
+  { label: 'Leistungen', href: '/#leistungen' },
+  { label: 'Über uns', href: '/#ueber-uns' },
+  { label: 'Partner', href: '/#partner' },
+  { label: 'Kontakt', href: '/#kontakt' },
 ];
 
 export default function Header() {
@@ -60,7 +60,7 @@ export default function Header() {
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-7">
             {navLinks?.map((link) => (
-              <a
+              <Link
                 key={link?.href}
                 href={link?.href}
                 className="text-sm font-semibold transition-colors relative group"
@@ -71,15 +71,15 @@ export default function Header() {
                   className="absolute -bottom-0.5 left-0 w-0 h-0.5 group-hover:w-full transition-all duration-300 rounded-full"
                   style={{ backgroundColor: '#9DC40E' }}
                 />
-              </a>
+              </Link>
             ))}
           </nav>
 
           {/* CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <a href="#kontakt" className="btn-primary text-sm">
+            <Link href="/#kontakt" className="btn-primary text-sm">
               Beratung anfragen
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Hamburger */}
@@ -101,7 +101,7 @@ export default function Header() {
         >
           <nav className="flex flex-col gap-2 mt-4">
             {navLinks?.map((link) => (
-              <a
+              <Link
                 key={link?.href}
                 href={link?.href}
                 onClick={() => setMenuOpen(false)}
@@ -109,17 +109,17 @@ export default function Header() {
                 style={{ color: '#040404', borderColor: '#d8dac4' }}
               >
                 {link?.label}
-              </a>
+              </Link>
             ))}
           </nav>
           <div className="mt-8">
-            <a
-              href="#kontakt"
+            <Link
+              href="/#kontakt"
               onClick={() => setMenuOpen(false)}
               className="btn-primary w-full justify-center text-base"
             >
               Beratung anfragen
-            </a>
+            </Link>
           </div>
         </div>
       )}

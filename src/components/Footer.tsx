@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
 import AppLogo from '@/components/ui/AppLogo';
 import Icon from '@/components/ui/AppIcon';
 import { CONTACT_INFO, IMAGES } from '@/config/constants';
@@ -56,19 +57,19 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2.5">
               {[
-                { label: 'Leistungen', href: '#leistungen' },
-                { label: 'Über uns', href: '#ueber-uns' },
-                { label: 'Partner', href: '#partner' },
-                { label: 'Kontakt', href: '#kontakt' },
+                { label: 'Leistungen', href: '/#leistungen' },
+                { label: 'Über uns', href: '/#ueber-uns' },
+                { label: 'Partner', href: '/#partner' },
+                { label: 'Kontakt', href: '/#kontakt' },
               ]?.map((link) => (
                 <li key={link?.href}>
-                  <a
+                  <Link
                     href={link?.href}
                     className="text-sm font-medium transition-colors hover:text-[#9DC40E]"
                     style={{ color: '#575757' }}
                   >
                     {link?.label}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -139,27 +140,27 @@ export default function Footer() {
             | WKO Wien Partner
           </p>
           <div className="flex gap-5">
-            <a
+            <Link
               href="/impressum"
               className="text-xs font-medium transition-colors hover:text-[#9DC40E]"
               style={{ color: '#9aaa7a' }}
             >
               Impressum
-            </a>
-            <a
+            </Link>
+            <Link
               href="/datenschutz"
               className="text-xs font-medium transition-colors hover:text-[#9DC40E]"
               style={{ color: '#9aaa7a' }}
             >
               Datenschutz
-            </a>
-            <a
-              href="#kontakt"
+            </Link>
+            <Link
+              href="/#kontakt"
               className="text-xs font-medium transition-colors hover:text-[#9DC40E]"
               style={{ color: '#9aaa7a' }}
             >
               Kontakt
-            </a>
+            </Link>
           </div>
         </div>
       </div>

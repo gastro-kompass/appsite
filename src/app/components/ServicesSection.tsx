@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef } from 'react';
 import AppImage from '@/components/ui/AppImage';
+import Link from 'next/link';
 import Icon from '@/components/ui/AppIcon';
 import ScrollRevealGrid from '@/components/ScrollRevealGrid';
 import { SERVICES_LIST as services } from '@/config/constants';
@@ -74,13 +75,13 @@ export default function ServicesSection() {
                 <Icon name={services[0].icon} size={16} className="text-white" variant="solid" />
                 <h3 className="font-extrabold text-white text-xl">{services[0].title}</h3>
               </div>
-              <a
+              <Link
                 href="#kontakt"
                 className="inline-flex items-center gap-1 text-xs font-bold mt-1 hover:gap-2.5 transition-all duration-200"
                 style={{ color: '#9DC40E' }}
               >
                 Mehr erfahren <Icon name="ArrowRightIcon" size={12} />
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -318,26 +319,26 @@ export default function ServicesSection() {
                   Alle Leistungen — modular oder als Paket.
                 </p>
               </div>
-              <a
+              <Link
                 href="#kontakt"
                 className="inline-flex items-center gap-1.5 text-white text-xs font-bold hover:gap-3 transition-all duration-200"
               >
                 Anfragen <Icon name="ArrowRightIcon" size={12} />
-              </a>
+              </Link>
             </div>
           </div>
         </ScrollRevealGrid>
 
         {/* Bottom CTA */}
         <div className="mt-8 text-center">
-          <a
+          <Link
             href="#kontakt"
             className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm transition-all duration-200 hover:opacity-90"
             style={{ backgroundColor: '#9DC40E', color: '#ffffff' }}
           >
             Jetzt anfragen
             <Icon name="ArrowRightIcon" size={16} />
-          </a>
+          </Link>
         </div>
       </div>
     </section>
