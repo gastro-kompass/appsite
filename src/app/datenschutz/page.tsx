@@ -118,7 +118,7 @@ export default function DatenschutzPage() {
   return (
     <main className="min-h-screen bg-white">
       {/* Header */}
-      <div className="bg-[#1A1A1A] py-16 px-6">
+      <div className="bg-[#1A1A1A] py-16 px-4 sm:px-6">
         <div className="mx-auto max-w-4xl">
           <Link
             href="/"
@@ -127,15 +127,18 @@ export default function DatenschutzPage() {
             <Icon name="ArrowLeftIcon" size={16} />
             Zurück zur Startseite
           </Link>
-          <h1 className="text-4xl md:text-5xl font-extrabold text-white">Datenschutzerklärung</h1>
+          <h1 className="text-2xl xs:text-3xl sm:text-4xl md:text-5xl font-extrabold text-white">
+            Datenschutzerklärung
+          </h1>
           <p className="text-white/50 mt-3 text-base">
             Gemäß DSGVO (Datenschutz-Grundverordnung) und DSG (Datenschutzgesetz)
           </p>
         </div>
       </div>
-      {/* Intro */}
-      <div className="mx-auto max-w-4xl px-6 pt-12 pb-4">
-        <div className="bg-[#8DC21F]/8 border border-[#8DC21F]/20 rounded-2xl p-6">
+      {/* Content */}
+      <div className="mx-auto max-w-4xl px-4 sm:px-6 py-16 space-y-12">
+        {/* Intro */}
+        <div className="bg-[#8DC21F]/8 border border-[#8DC21F]/20 rounded-2xl p-4 sm:p-6">
           <div className="flex items-start gap-4">
             <div className="w-10 h-10 rounded-xl bg-[#8DC21F]/15 flex items-center justify-center shrink-0 mt-0.5">
               <Icon name="ShieldCheckIcon" size={20} className="text-[#8DC21F]" />
@@ -149,20 +152,23 @@ export default function DatenschutzPage() {
             </div>
           </div>
         </div>
-      </div>
-      {/* Sections */}
-      <div className="mx-auto max-w-4xl px-6 py-8 space-y-6">
-        {sections.map((section) => (
-          <div key={section.id} className="bg-[#F5F5F5] rounded-2xl p-6 md:p-8">
-            <h2 className="text-xl font-extrabold text-[#1A1A1A] mb-4">{section.title}</h2>
-            <div className="text-gray-700 leading-relaxed text-sm whitespace-pre-line">
-              {section.content}
+
+        {/* Sections */}
+        <div className="space-y-6">
+          {sections.map((section) => (
+            <div key={section.id} className="bg-[#F5F5F5] rounded-2xl p-4 sm:p-6 md:p-8">
+              <h2 className="text-xl font-extrabold text-[#1A1A1A] mb-4 break-words">
+                {section.title}
+              </h2>
+              <div className="text-gray-700 leading-relaxed text-sm whitespace-pre-line break-words">
+                {section.content}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
 
         {/* Contact for data requests */}
-        <div className="bg-[#1A1A1A] rounded-2xl p-6 md:p-8">
+        <div className="bg-[#1A1A1A] rounded-2xl p-4 sm:p-6 md:p-8">
           <h2 className="text-xl font-extrabold text-white mb-3">Datenschutzanfragen</h2>
           <p className="text-white/60 text-sm leading-relaxed mb-5">
             Für Anfragen zum Datenschutz, zur Auskunft über gespeicherte Daten oder zur

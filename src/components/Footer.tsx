@@ -27,7 +27,7 @@ export default function Footer() {
               <br />
               Ihr Partner für die Gastronomie in Wien.
             </p>
-            <div className="flex gap-2 mt-4">
+            {/* <div className="flex gap-2 mt-4">
               <a
                 href="#"
                 className="w-8 h-8 rounded-lg flex items-center justify-center transition-all"
@@ -44,7 +44,7 @@ export default function Footer() {
               >
                 <Icon name="BuildingOfficeIcon" size={16} />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Quick Links */}
