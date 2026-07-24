@@ -107,12 +107,16 @@ export default function AboutSection() {
               ))}
             </ScrollRevealGrid>
 
-            <div className="flex flex-col sm:flex-row sm:items-center gap-3 pt-2">
-              <Link href="#kontakt" className="btn-primary text-sm">
+            <div className="flex flex-col items-center sm:flex-row sm:items-center gap-3 sm:gap-5 pt-3 w-full">
+              <Link
+                href="/#kontakt"
+                className="inline-flex items-center justify-center gap-2.5 px-7 py-3.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90 shadow-sm w-full sm:w-fit whitespace-nowrap shrink-0"
+                style={{ backgroundColor: '#9DC40E' }}
+              >
                 Beratung anfragen
-                <Icon name="ArrowRightIcon" size={16} />
+                <Icon name="ArrowLongRightIcon" size={18} />
               </Link>
-              <span className="text-xs font-medium" style={{ color: '#575757' }}>
+              <span className="text-sm font-medium text-[#575757] text-center sm:text-left">
                 Kostenlose Erstberatung
               </span>
             </div>

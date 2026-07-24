@@ -8,97 +8,109 @@ import Footer from '@/components/Footer';
 const sections = [
   {
     id: 1,
-    title: '1. Verantwortlicher',
-    content: `Verantwortlicher im Sinne der Datenschutz-Grundverordnung (DSGVO) und anderer nationaler Datenschutzgesetze sowie sonstiger datenschutzrechtlicher Bestimmungen ist:
+    title: 'Verantwortlicher',
+    content: `Verantwortlich für die Verarbeitung Ihrer personenbezogenen Daten auf dieser Website ist:
 
-GASTRO-KOMPASS
-Döblinger Straße 82/2a
-1190 Wien, Österreich
-Telefon: +43 660 7676484
-E-Mail: info@gastrokompass.at`,
+LA Entertainment & Consulting e.U.
+Inhaber: Lulzim Asanoski
+Döblinger Hauptstraße 82/2A
+1190 Wien
+Österreich
+
+E-Mail: info@business2love.at
+Website: business2love.at`,
   },
   {
     id: 2,
-    title: '2. Allgemeines zur Datenverarbeitung',
-    content: `Wir verarbeiten personenbezogene Daten unserer Nutzer grundsätzlich nur, soweit dies zur Bereitstellung einer funktionsfähigen Website sowie unserer Inhalte und Leistungen erforderlich ist. Die Verarbeitung personenbezogener Daten unserer Nutzer erfolgt regelmäßig nur nach Einwilligung des Nutzers. Eine Ausnahme gilt in solchen Fällen, in denen eine vorherige Einholung einer Einwilligung aus tatsächlichen Gründen nicht möglich ist und die Verarbeitung der Daten durch gesetzliche Vorschriften gestattet ist.`,
+    title: 'Allgemeines',
+    content: `Der Schutz Ihrer personenbezogenen Daten ist uns ein besonderes Anliegen. Wir verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen der Datenschutz-Grundverordnung (DSGVO), des österreichischen Datenschutzgesetzes (DSG) sowie des Telekommunikationsgesetzes (TKG), soweit dieses anwendbar ist.`,
   },
   {
     id: 3,
-    title: '3. Rechtsgrundlage der Verarbeitung',
-    content: `Soweit wir für Verarbeitungsvorgänge personenbezogener Daten eine Einwilligung der betroffenen Person einholen, dient Art. 6 Abs. 1 lit. a DSGVO als Rechtsgrundlage.
+    title: 'Erhebung und Verarbeitung personenbezogener Daten',
+    content: `Personenbezogene Daten werden nur verarbeitet, wenn Sie uns diese freiwillig mitteilen, beispielsweise durch eine Kontaktaufnahme per E-Mail oder über ein Kontaktformular.
 
-Bei der Verarbeitung von personenbezogenen Daten, die zur Erfüllung eines Vertrages, dessen Vertragspartei die betroffene Person ist, erforderlich ist, dient Art. 6 Abs. 1 lit. b DSGVO als Rechtsgrundlage.
-
-Soweit eine Verarbeitung personenbezogener Daten zur Erfüllung einer rechtlichen Verpflichtung erforderlich ist, der unser Unternehmen unterliegt, dient Art. 6 Abs. 1 lit. c DSGVO als Rechtsgrundlage.
-
-Ist die Verarbeitung zur Wahrung eines berechtigten Interesses unseres Unternehmens oder eines Dritten erforderlich und überwiegen die Interessen, Grundrechte und Grundfreiheiten des Betroffenen das erstgenannte Interesse nicht, so dient Art. 6 Abs. 1 lit. f DSGVO als Rechtsgrundlage für die Verarbeitung.`,
-  },
-  {
-    id: 4,
-    title: '4. Datenlöschung und Speicherdauer',
-    content: `Die personenbezogenen Daten der betroffenen Person werden gelöscht oder gesperrt, sobald der Zweck der Speicherung entfällt. Eine Speicherung kann darüber hinaus erfolgen, wenn dies durch den europäischen oder nationalen Gesetzgeber in unionsrechtlichen Verordnungen, Gesetzen oder sonstigen Vorschriften, denen der Verantwortliche unterliegt, vorgesehen wurde. Eine Sperrung oder Löschung der Daten erfolgt auch dann, wenn eine durch die genannten Normen vorgeschriebene Speicherfrist abläuft, es sei denn, dass eine Erforderlichkeit zur weiteren Speicherung der Daten für einen Vertragsabschluss oder eine Vertragserfüllung besteht.`,
-  },
-  {
-    id: 5,
-    title: '5. Bereitstellung der Website und Erstellung von Logfiles',
-    content: `Bei jedem Aufruf unserer Internetseite erfasst unser System automatisiert Daten und Informationen vom Computersystem des aufrufenden Rechners. Folgende Daten werden hierbei erhoben:
-
-• Informationen über den Browsertyp und die verwendete Version
-• Das Betriebssystem des Nutzers
-• Den Internet-Service-Provider des Nutzers
-• Die IP-Adresse des Nutzers
-• Datum und Uhrzeit des Zugriffs
-• Websites, von denen das System des Nutzers auf unsere Internetseite gelangt
-• Websites, die vom System des Nutzers über unsere Website aufgerufen werden
-
-Die Daten werden in den Logfiles unseres Systems gespeichert. Eine Speicherung dieser Daten zusammen mit anderen personenbezogenen Daten des Nutzers findet nicht statt. Rechtsgrundlage für die vorübergehende Speicherung der Daten und der Logfiles ist Art. 6 Abs. 1 lit. f DSGVO.`,
-  },
-  {
-    id: 6,
-    title: '6. Kontaktformular und E-Mail-Kontakt',
-    content: `Auf unserer Internetseite ist ein Kontaktformular vorhanden, welches für die elektronische Kontaktaufnahme genutzt werden kann. Nimmt ein Nutzer diese Möglichkeit wahr, so werden die in der Eingabemaske eingegeben Daten an uns übermittelt und gespeichert. Diese Daten sind:
+Dabei können insbesondere folgende Daten verarbeitet werden:
 
 • Name
 • E-Mail-Adresse
-• Telefonnummer (optional)
-• Nachricht / Anliegen
+• Telefonnummer (falls angegeben)
+• Inhalt Ihrer Nachricht
 
-Im Zeitpunkt der Absendung der Nachricht werden zudem folgende Daten gespeichert: Die IP-Adresse des Nutzers sowie Datum und Uhrzeit der Registrierung.
+Die Verarbeitung erfolgt ausschließlich zur Bearbeitung Ihrer Anfrage sowie zur Durchführung vorvertraglicher Maßnahmen oder zur Erfüllung eines Vertrages.`,
+  },
+  {
+    id: 4,
+    title: 'Rechtsgrundlagen',
+    content: `Die Verarbeitung Ihrer personenbezogenen Daten erfolgt gemäß Art. 6 Abs. 1 DSGVO, insbesondere auf Grundlage:
 
-Für die Verarbeitung der Daten wird im Rahmen des Absendevorgangs Ihre Einwilligung eingeholt und auf diese Datenschutzerklärung verwiesen. Rechtsgrundlage für die Verarbeitung der Daten ist bei Vorliegen einer Einwilligung des Nutzers Art. 6 Abs. 1 lit. a DSGVO.`,
+lit. a - Einwilligung
+lit. b - Vertragserfüllung oder Durchführung vorvertraglicher Maßnahmen
+lit. c - Erfüllung gesetzlicher Verpflichtungen
+lit. f - Berechtigtes Interesse an einer sicheren und funktionierenden Website sowie einer effizienten Kommunikation.`,
+  },
+  {
+    id: 5,
+    title: 'Server-Logfiles',
+    content: `Beim Besuch dieser Website werden durch den Hosting-Anbieter automatisch Informationen erhoben und in Server-Logfiles gespeichert. Hierzu zählen insbesondere:
+
+• IP-Adresse
+• Datum und Uhrzeit des Zugriffs
+• Browsertyp und Browserversion
+• Betriebssystem
+• besuchte Seiten
+• Referrer-URL
+
+Diese Daten dienen ausschließlich der Gewährleistung eines sicheren und störungsfreien Betriebs der Website sowie der Fehleranalyse.`,
+  },
+  {
+    id: 6,
+    title: 'Cookies',
+    content: `Diese Website verwendet ausschließlich technisch notwendige Cookies, soweit dies für den Betrieb der Website erforderlich ist.
+
+Sollten künftig weitere Cookies (z. B. Analyse- oder Marketing-Cookies) eingesetzt werden, erfolgt dies ausschließlich nach Ihrer ausdrücklichen Einwilligung über ein Cookie-Banner gemäß den gesetzlichen Bestimmungen.`,
   },
   {
     id: 7,
-    title: '7. Cookies',
-    content: `Unsere Internetseite verwendet Cookies. Bei Cookies handelt es sich um Textdateien, die im Internetbrowser bzw. vom Internetbrowser auf dem Computersystem des Nutzers gespeichert werden. Ruft ein Nutzer eine Website auf, so kann ein Cookie auf dem Betriebssystem des Nutzers gespeichert werden. Dieser Cookie enthält eine charakteristische Zeichenfolge, die eine eindeutige Identifizierung des Browsers beim erneuten Aufrufen der Website ermöglicht.
-
-Wir setzen Cookies ein, um unsere Website nutzerfreundlicher zu gestalten. Einige Elemente unserer Internetseite erfordern es, dass der aufrufende Browser auch nach einem Seitenwechsel identifiziert werden kann.
-
-Die Rechtsgrundlage für die Verarbeitung personenbezogener Daten unter Verwendung technisch notwendiger Cookies ist Art. 6 Abs. 1 lit. f DSGVO.`,
+    title: 'Speicherdauer',
+    content: `Ihre personenbezogenen Daten werden nur so lange gespeichert, wie dies zur Erfüllung der jeweiligen Zwecke erforderlich ist oder gesetzliche Aufbewahrungspflichten bestehen.`,
   },
   {
     id: 8,
-    title: '8. Rechte der betroffenen Person',
-    content: `Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:
+    title: 'Weitergabe personenbezogener Daten',
+    content: `Eine Übermittlung Ihrer personenbezogenen Daten an Dritte erfolgt nur, wenn:
 
-• Recht auf Auskunft (Art. 15 DSGVO)
-• Recht auf Berichtigung (Art. 16 DSGVO)
-• Recht auf Löschung (Art. 17 DSGVO)
-• Recht auf Einschränkung der Verarbeitung (Art. 18 DSGVO)
-• Recht auf Datenübertragbarkeit (Art. 20 DSGVO)
-• Recht auf Widerspruch gegen die Verarbeitung (Art. 21 DSGVO)
-
-Sie haben zudem das Recht, sich bei einer Datenschutz-Aufsichtsbehörde über die Verarbeitung Ihrer personenbezogenen Daten durch uns zu beschweren. Die zuständige Aufsichtsbehörde in Österreich ist die Datenschutzbehörde (DSB), Barichgasse 40–42, 1030 Wien, www.dsb.gv.at.`,
+• Sie ausdrücklich eingewilligt haben,
+• dies zur Vertragserfüllung erforderlich ist,
+• eine gesetzliche Verpflichtung besteht oder
+• ein berechtigtes Interesse gemäß Art. 6 Abs. 1 lit. f DSGVO vorliegt.`,
   },
   {
     id: 9,
-    title: '9. Datensicherheit',
-    content: `Wir verwenden innerhalb des Website-Besuchs das verbreitete SSL-Verfahren (Secure Socket Layer) in Verbindung mit der jeweils höchsten Verschlüsselungsstufe, die von Ihrem Browser unterstützt wird. In der Regel handelt es sich dabei um eine 256-Bit-Verschlüsselung. Falls Ihr Browser keine 256-Bit-Verschlüsselung unterstützt, greifen wir stattdessen auf 128-Bit-v3-Technologie zurück. Ob eine einzelne Seite unseres Internetauftrittes verschlüsselt übertragen wird, erkennen Sie an der geschlossenen Darstellung des Schüssel- beziehungsweise Schloss-Symbols in der unteren Statusleiste Ihres Browsers.`,
+    title: 'Ihre Rechte',
+    content: `Sie haben jederzeit das Recht auf:
+
+• Auskunft,
+• Berichtigung,
+• Löschung,
+• Einschränkung der Verarbeitung,
+• Datenübertragbarkeit,
+• Widerspruch gegen die Verarbeitung sowie
+• Widerruf einer erteilten Einwilligung mit Wirkung für die Zukunft.
+
+Zur Ausübung Ihrer Rechte können Sie uns jederzeit unter der oben angegebenen E-Mail-Adresse kontaktieren.`,
   },
   {
     id: 10,
-    title: '10. Aktualität und Änderung dieser Datenschutzerklärung',
-    content: `Diese Datenschutzerklärung ist aktuell gültig und hat den Stand Juni 2026. Durch die Weiterentwicklung unserer Website und Angebote darüber oder aufgrund geänderter gesetzlicher beziehungsweise behördlicher Vorgaben kann es notwendig werden, diese Datenschutzerklärung zu ändern. Die jeweils aktuelle Datenschutzerklärung kann jederzeit auf der Website unter dieser URL von Ihnen abgerufen und ausgedruckt werden.`,
+    title: 'Beschwerderecht',
+    content: `Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen datenschutzrechtliche Vorschriften verstößt, haben Sie das Recht, Beschwerde bei der zuständigen Aufsichtsbehörde einzulegen.
+
+Zuständige Aufsichtsbehörde in Österreich ist die Österreichische Datenschutzbehörde (DSB).`,
+  },
+  {
+    id: 11,
+    title: 'Änderungen dieser Datenschutzerklärung',
+    content: `Wir behalten uns vor, diese Datenschutzerklärung bei Änderungen unserer Website oder aufgrund gesetzlicher Vorgaben anzupassen. Es gilt jeweils die auf dieser Website veröffentlichte aktuelle Fassung.`,
   },
 ];
 
@@ -131,9 +143,8 @@ export default function DatenschutzPage() {
             <div>
               <h2 className="font-bold text-[#1A1A1A] mb-1">Ihr Datenschutz ist uns wichtig</h2>
               <p className="text-gray-600 text-sm leading-relaxed">
-                GASTRO-KOMPASS nimmt den Schutz Ihrer persönlichen Daten sehr ernst. Wir behandeln
-                Ihre personenbezogenen Daten vertraulich und entsprechend der gesetzlichen
-                Datenschutzvorschriften sowie dieser Datenschutzerklärung.
+                Der Schutz Ihrer personenbezogenen Daten ist uns ein besonderes Anliegen. Wir
+                verarbeiten Ihre Daten ausschließlich auf Grundlage der gesetzlichen Bestimmungen.
               </p>
             </div>
           </div>
@@ -141,11 +152,11 @@ export default function DatenschutzPage() {
       </div>
       {/* Sections */}
       <div className="mx-auto max-w-4xl px-6 py-8 space-y-6">
-        {sections?.map((section) => (
-          <div key={section?.id} className="bg-[#F5F5F5] rounded-2xl p-6 md:p-8">
-            <h2 className="text-xl font-extrabold text-[#1A1A1A] mb-4">{section?.title}</h2>
+        {sections.map((section) => (
+          <div key={section.id} className="bg-[#F5F5F5] rounded-2xl p-6 md:p-8">
+            <h2 className="text-xl font-extrabold text-[#1A1A1A] mb-4">{section.title}</h2>
             <div className="text-gray-700 leading-relaxed text-sm whitespace-pre-line">
-              {section?.content}
+              {section.content}
             </div>
           </div>
         ))}
@@ -159,18 +170,11 @@ export default function DatenschutzPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3">
             <a
-              href="mailto:info@gastrokompass.at"
+              href="mailto:info@business2love.at"
               className="inline-flex items-center gap-2 bg-[#8DC21F] text-white px-5 py-3 rounded-xl font-semibold text-sm hover:bg-[#7ab01a] transition-colors"
             >
               <Icon name="EnvelopeIcon" size={16} />
-              info@gastrokompass.at
-            </a>
-            <a
-              href="tel:+436607676484"
-              className="inline-flex items-center gap-2 bg-white/10 text-white px-5 py-3 rounded-xl font-semibold text-sm hover:bg-white/15 transition-colors"
-            >
-              <Icon name="PhoneIcon" size={16} />
-              +43 660 7676484
+              info@business2love.at
             </a>
           </div>
         </div>

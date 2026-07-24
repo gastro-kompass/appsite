@@ -416,7 +416,7 @@ export default function CompassSection() {
         </div>
 
         {/* Mobile quick links */}
-        <div className="mt-10 grid grid-cols-2 gap-2.5 sm:hidden">
+        {/* <div className="mt-10 grid grid-cols-2 gap-2.5 sm:hidden">
           {segments.map((seg) => (
             <button
               key={seg.id}
@@ -448,7 +448,7 @@ export default function CompassSection() {
               </div>
             </button>
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

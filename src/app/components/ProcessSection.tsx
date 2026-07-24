@@ -74,7 +74,7 @@ export default function ProcessSection() {
           </div>
 
           {/* Right: Photo collage */}
-          <div className="grid grid-cols-2 gap-3 h-[280px] sm:h-[420px]">
+          <div className="grid grid-cols-2 gap-3 h-[380px] sm:h-[460px]">
             <div className="relative rounded-2xl overflow-hidden img-hover-zoom row-span-2">
               <AppImage
                 src={IMAGES.processImage1}

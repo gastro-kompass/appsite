@@ -19,27 +19,27 @@ export default function CtaBanner() {
           <div className="absolute bottom-0 left-0 w-48 h-48 rounded-full bg-white/10 translate-y-1/2 -translate-x-1/4" />
 
           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="space-y-3 text-center md:text-left">
+            <div className="space-y-3 text-center md:text-left flex flex-col items-center md:items-start w-full">
               <span
-                className="inline-block px-3 py-1.5 rounded-full text-white text-xs font-bold uppercase tracking-widest"
+                className="inline-block px-4 py-1.5 rounded-xl text-white text-xs font-bold uppercase tracking-widest"
                 style={{ backgroundColor: 'rgba(255,255,255,0.2)' }}
               >
                 Kostenlose Erstberatung
               </span>
-              <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight">
+              <h2 className="text-3xl md:text-4xl font-extrabold text-white leading-tight max-w-lg text-center md:text-left">
                 Bereit, Ihr Gastronomie-
                 <br className="hidden md:block" />
                 Projekt zu starten?
               </h2>
-              <p className="text-white/80 text-sm font-light max-w-md">
+              <p className="text-white/80 text-sm font-light max-w-md text-center md:text-left">
                 Unverbindlich & persönlich. Wir sind für Sie da.
               </p>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-3 flex-shrink-0">
+            <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto items-center justify-center flex-shrink-0">
               <Link
-                href="#kontakt"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl font-bold text-sm transition-all duration-200 shadow-sm hover:opacity-90"
+                href="/#kontakt"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm transition-all duration-200 shadow-sm hover:opacity-90 w-full sm:w-auto whitespace-nowrap"
                 style={{ backgroundColor: '#ffffff', color: '#040404' }}
               >
                 <Icon name="ArrowRightCircleIcon" size={18} />
@@ -49,7 +49,7 @@ export default function CtaBanner() {
                 href={CONTACT_INFO.whatsappLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 px-7 py-3.5 rounded-xl border-2 border-white/30 text-white font-bold text-sm hover:bg-white/10 transition-all duration-200"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl border border-white/40 text-white font-bold text-sm hover:bg-white/10 transition-all duration-200 w-full sm:w-auto whitespace-nowrap"
               >
                 <Icon name="ChatBubbleOvalLeftEllipsisIcon" size={18} />
                 WhatsApp Chat

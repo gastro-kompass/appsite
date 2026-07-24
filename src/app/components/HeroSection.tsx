@@ -81,7 +81,7 @@ export default function HeroSection() {
 
             {/* Trust pills */}
             <div className="flex flex-wrap gap-2 pt-2">
-              {['9+ Leistungsbereiche', '100+ Partnerbetriebe', 'Wien & Österreich']?.map(
+              {['Wien & Österreich', '9+ Leistungsbereiche', '100+ Partnerbetriebe']?.map(
                 (item) => (
                   <span
                     key={item}
@@ -106,12 +106,12 @@ export default function HeroSection() {
             variants={containerVariants}
             initial="hidden"
             animate="show"
-            className="relative grid grid-cols-1 sm:grid-cols-2 gap-4 h-auto sm:h-[520px] lg:h-[580px]"
+            className="relative grid grid-cols-2 gap-4 sm:gap-6 h-auto sm:h-[540px] lg:h-[600px]"
           >
             {/* Large top-left image */}
             <motion.div
               variants={cardVariants}
-              className="relative rounded-2xl overflow-hidden img-hover-zoom h-60 sm:h-auto"
+              className="relative rounded-2xl sm:rounded-[2.25rem] overflow-hidden img-hover-zoom h-48 sm:h-auto shadow-md"
             >
               <AppImage
                 src={IMAGES.heroImage1}
@@ -122,13 +122,13 @@ export default function HeroSection() {
                 priority
               />
               <div
-                className="absolute bottom-3 left-3 rounded-xl px-3 py-2 shadow-sm"
-                style={{ backgroundColor: 'rgba(245,247,228,0.95)' }}
+                className="absolute bottom-3 sm:bottom-5 left-1/2 -translate-x-1/2 rounded-lg sm:rounded-[20px] px-3 sm:px-6 py-1.5 sm:py-2.5 shadow-xl text-center w-[90%] sm:w-[85%] backdrop-blur-md"
+                style={{ backgroundColor: 'rgba(255,255,255,0.95)' }}
               >
-                <p className="text-xs font-bold" style={{ color: '#040404' }}>
+                <p className="text-[10px] sm:text-sm font-bold text-[#040404] tracking-tight">
                   Gastronomie-Experten
                 </p>
-                <p className="text-xs" style={{ color: '#575757' }}>
+                <p className="text-[9px] sm:text-xs text-[#575757] font-medium mt-0.5">
                   Wien & Österreich
                 </p>
               </div>
@@ -137,29 +137,42 @@ export default function HeroSection() {
             {/* Top-right: green accent card */}
             <motion.div
               variants={cardVariants}
-              className="relative rounded-2xl overflow-hidden flex flex-col justify-between p-5 h-56 sm:h-auto"
+              className="relative rounded-2xl sm:rounded-[2.25rem] flex flex-col justify-between p-4 sm:p-8 h-48 sm:h-auto shadow-md text-white"
               style={{ backgroundColor: '#9DC40E' }}
             >
               <div>
-                <p className="text-white/80 text-xs font-bold uppercase tracking-widest mb-2">
+                <p className="text-white/70 text-[9px] sm:text-xs font-bold uppercase tracking-widest mb-1 sm:text-xs">
                   Orientierung
                 </p>
-                <h3 className="text-white font-extrabold text-xl leading-tight">
+                <h3 className="text-white font-extrabold text-lg sm:text-3xl lg:text-4xl leading-tight">
                   Entlastung.
                   <br />
                   Wachstum.
                 </h3>
               </div>
-              <div className="space-y-2">
+              <div className="space-y-1 sm:space-y-2.5 pt-2">
                 {['Bürokratie-Entlastung', 'Starke Partner', 'WKO-zertifiziert']?.map((item) => (
-                  <div key={item} className="flex items-start gap-2">
+                  <div key={item} className="flex items-center gap-1.5 sm:gap-2.5">
                     <div
-                      className="w-4 h-4 rounded-full flex items-center justify-center shrink-0 mt-0.5"
-                      style={{ backgroundColor: 'rgba(255,255,255,0.25)' }}
+                      className="w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full flex items-center justify-center shrink-0"
+                      style={{ backgroundColor: 'rgba(255,255,255,0.2)' }}
                     >
-                      <Icon name="CheckIcon" size={10} className="text-white" />
+                      <Icon
+                        name="CheckIcon"
+                        size={8}
+                        className="text-white sm:hidden"
+                        variant="solid"
+                      />
+                      <Icon
+                        name="CheckIcon"
+                        size={12}
+                        className="text-white hidden sm:block"
+                        variant="solid"
+                      />
                     </div>
-                    <span className="text-white/90 text-xs font-medium leading-tight">{item}</span>
+                    <span className="text-white/90 text-[10px] sm:text-sm font-medium leading-tight">
+                      {item}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -168,25 +181,26 @@ export default function HeroSection() {
             {/* Bottom-left: stats card */}
             <motion.div
               variants={cardVariants}
-              className="relative rounded-2xl p-5 flex flex-col justify-between h-48 sm:h-auto"
+              className="relative rounded-2xl sm:rounded-[2.25rem] p-4 sm:p-8 flex flex-col justify-between h-48 sm:h-auto shadow-md text-white"
               style={{ backgroundColor: '#9DC40E' }}
             >
-              <p
-                className="text-xs font-bold uppercase tracking-widest"
-                style={{ color: 'rgba(255,255,255,0.7)' }}
-              >
+              <p className="text-white/70 text-[9px] sm:text-xs font-bold uppercase tracking-widest">
                 Unsere Bilanz
               </p>
-              <div className="flex flex-col sm:flex-row gap-4 mt-3">
+              <div className="grid grid-cols-2 gap-2 sm:gap-4 mt-auto">
                 <div>
-                  <p className="text-3xl font-extrabold text-white leading-none">9+</p>
-                  <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                  <p className="text-xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-none">
+                    9+
+                  </p>
+                  <p className="text-[10px] sm:text-xs lg:text-sm mt-1 sm:mt-2 text-white/80 font-medium leading-tight">
                     Leistungs­bereiche
                   </p>
                 </div>
                 <div>
-                  <p className="text-3xl font-extrabold text-white leading-none">100+</p>
-                  <p className="text-xs mt-1" style={{ color: 'rgba(255,255,255,0.7)' }}>
+                  <p className="text-xl sm:text-4xl lg:text-5xl font-extrabold text-white leading-none">
+                    100+
+                  </p>
+                  <p className="text-[10px] sm:text-xs lg:text-sm mt-1 sm:mt-2 text-white/80 font-medium leading-tight">
                     Partner­betriebe
                   </p>
                 </div>
@@ -196,7 +210,7 @@ export default function HeroSection() {
             {/* Bottom-right: photo */}
             <motion.div
               variants={cardVariants}
-              className="relative rounded-2xl overflow-hidden img-hover-zoom h-60 sm:h-auto"
+              className="relative rounded-2xl sm:rounded-[2.25rem] overflow-hidden img-hover-zoom h-48 sm:h-auto shadow-md"
             >
               <AppImage
                 src={IMAGES.heroImage2}
@@ -205,12 +219,14 @@ export default function HeroSection() {
                 className="object-cover"
                 sizes="300px"
               />
-              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute inset-0 bg-black/10" />
               <div
-                className="absolute top-3 right-3 rounded-lg px-2.5 py-1.5"
+                className="absolute top-3 sm:top-4 right-3 sm:right-4 rounded-full px-2.5 sm:px-4 py-1 sm:py-1.5 shadow-md"
                 style={{ backgroundColor: '#9DC40E' }}
               >
-                <p className="text-white text-xs font-bold">{CONTACT_INFO.wkoPartnerLabel}</p>
+                <p className="text-white text-[9px] sm:text-xs font-bold tracking-wide">
+                  WKO Partner
+                </p>
               </div>
             </motion.div>
           </motion.div>

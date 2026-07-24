@@ -15,9 +15,9 @@ export const CONTACT_INFO = {
 };
 
 export const OFFICE_HOURS = [
-  { day: 'Mo – Do', hours: '09:00 – 18:00 Uhr' },
-  { day: 'Fr', hours: '09:00 – 15:00 Uhr' },
-  { day: 'Sa – So', hours: 'Geschlossen' },
+  { day: 'Mo - Do', hours: '09:00 - 18:00 Uhr' },
+  { day: 'Fr', hours: '09:00 - 15:00 Uhr' },
+  { day: 'Sa - So', hours: 'Geschlossen' },
 ];
 
 export const IMAGES = {

@@ -94,39 +94,46 @@ export default function TestimonialSection() {
             </div>
 
             {/* Stats row */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+            <div className="grid grid-cols-3 gap-2.5 sm:gap-3">
               {[
                 { value: '24h', label: 'Reaktionszeit' },
                 { value: '100+', label: 'Betriebe' },
-                { value: '5.0', label: 'Bewertung', isRating: true },
+                { value: '5', label: 'Bewertung', isRating: true },
               ]?.map((stat) => (
                 <div
                   key={stat.label}
-                  className="bg-[#f8faf2] rounded-xl p-3 border text-center"
+                  className="rounded-xl p-2.5 sm:p-3 border text-center"
                   style={{ borderColor: '#d8dac4' }}
                 >
-                  <div className="flex items-center justify-center gap-1">
-                    <p className="text-2xl font-extrabold" style={{ color: '#040404' }}>
-                      {stat?.value}
+                  <div className="flex items-center justify-center gap-0.5">
+                    <p className="text-xl sm:text-2xl font-extrabold" style={{ color: '#040404' }}>
+                      {stat.value}
                     </p>
                     {stat.isRating && (
                       <Icon
                         name="StarIcon"
                         size={18}
-                        className="text-[#9DC40E]"
+                        style={{ color: '#040404' }}
                         variant="solid"
-                        style={{ marginTop: '-2px' }}
+                        className="shrink-0 -mt-1"
                       />
                     )}
                   </div>
-                  <p className="text-xs mt-0.5 font-medium" style={{ color: '#575757' }}>
-                    {stat?.label}
+                  <p
+                    className="text-[10px] sm:text-xs mt-0.5 font-medium"
+                    style={{ color: '#575757' }}
+                  >
+                    {stat.label}
                   </p>
                 </div>
               ))}
             </div>
 
-            <Link href="#kontakt" className="btn-primary text-sm inline-flex">
+            <Link
+              href="/#kontakt"
+              className="inline-flex items-center gap-2 px-6 py-3.5 rounded-xl font-bold text-sm text-white transition-all hover:opacity-90 shadow-sm w-fit"
+              style={{ backgroundColor: '#9DC40E' }}
+            >
               <Icon name="ChatBubbleLeftRightIcon" size={16} />
               Jetzt Beratung anfragen
             </Link>
