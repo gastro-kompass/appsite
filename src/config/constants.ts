@@ -21,7 +21,7 @@ export const OFFICE_HOURS = [
 ];
 
 export const IMAGES = {
-  logo: '/assets/images/WhatsApp_Image_2026-05-28_at_18.11.40-1780386725874.jpeg',
+  logo: '/assets/images/logo.jpeg',
   heroBg: '/assets/images/hero-bg.png',
   aboutOwner: '/assets/images/about-owner.png',
   aboutOffice: '/assets/images/about-office.png',
