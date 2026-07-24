@@ -1,7 +1,7 @@
 // Global Constants for Gastrokompass
 
 export const CONTACT_INFO = {
-  email: 'info@gastrokompass.at',
+  email: 'info@gastro-kompass.at',
   phone: '+43 660 7676484',
   phoneLink: 'tel:+436607676484',
   whatsappLink: 'https://wa.me/436607676484',

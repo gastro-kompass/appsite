@@ -254,8 +254,8 @@ export default function ContactSection() {
                   {
                     icon: 'EnvelopeIcon' as const,
                     label: 'E-Mail',
-                    value: 'info@gastrokompass.at',
-                    href: 'mailto:info@gastrokompass.at',
+                    value: 'info@gastro-kompass.at',
+                    href: 'mailto:info@gastro-kompass.at',
                   },
                 ].map((item) => (
                   <li key={item.label} className="flex items-start gap-3">

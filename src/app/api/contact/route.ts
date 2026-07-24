@@ -100,7 +100,7 @@ ${message}
           <!-- Footer -->
           <div style="text-align: center; padding: 20px; border-top: 1px solid #f2f4e8; background-color: #fafbfa; border-radius: 0 0 12px 12px;">
             <p style="margin: 0; font-size: 10px; color: #a0a0a0; font-family: sans-serif; letter-spacing: 0.2px;">
-              Diese E-Mail wurde automatisch von Ihrer Next.js App auf gastrokompass.at generiert.
+              Diese E-Mail wurde über das Kontaktformular auf gastrokompass.at versendet.
             </p>
           </div>
         </div>

@@ -8,6 +8,6 @@ export const emailConfig = {
     },
     secure: process.env.SMTP_SECURE === 'true', // true for port 465, false for others
   },
-  adminEmail: process.env.CONTACT_RECEIVER_EMAIL || 'info@gastrokompass.at',
+  adminEmail: process.env.CONTACT_RECEIVER_EMAIL || 'info@gastro-kompass.at',
   fromEmail: process.env.CONTACT_SENDER_EMAIL || '"Gastrokompass" <no-reply@gastrokompass.at>',
 };
