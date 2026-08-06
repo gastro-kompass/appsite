@@ -20,7 +20,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'http://localhost:3000'),
   title: 'GASTRO-KOMPASS — Ihr Wegweiser in der Gastronomie',
   description:
-    'GASTRO-KOMPASS begleitet Gastronomen in Wien von der Standortsuche bis zum laufenden Betrieb — strukturiert, kompetent, exklusiv. WKO Wien Partner.',
+    'GASTRO-KOMPASS begleitet Gastronomen in Wien von der Standortsuche bis zum laufenden Betrieb — strukturiert, kompetent, exklusiv.',
   icons: {
     icon: [{ url: '/favicon.ico', type: 'image/x-icon' }],
   },

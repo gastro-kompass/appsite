@@ -43,13 +43,13 @@ export default function HeroSection() {
             className="space-y-7 py-8"
           >
             {/* Badge */}
-            <span
+            {/* <span
               className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest"
               style={{ backgroundColor: 'rgba(157,196,14,0.12)', color: '#9DC40E' }}
             >
               <span className="w-1.5 h-1.5 rounded-full" style={{ backgroundColor: '#9DC40E' }} />
               {CONTACT_INFO.wkoPartnerLabel}
-            </span>
+            </span> */}
 
             {/* Headline */}
             <h1 className="text-hero-xl font-extrabold leading-tight" style={{ color: '#040404' }}>
@@ -151,7 +151,7 @@ export default function HeroSection() {
                 </h3>
               </div>
               <div className="space-y-1 sm:space-y-2.5 pt-2">
-                {['Bürokratie-Entlastung', 'Starke Partner', 'WKO-zertifiziert']?.map((item) => (
+                {['Bürokratie-Entlastung', 'Starke Partner']?.map((item) => (
                   <div key={item} className="flex items-center gap-1.5 sm:gap-2.5">
                     <div
                       className="w-3.5 h-3.5 sm:w-5 sm:h-5 rounded-full flex items-center justify-center shrink-0"
@@ -220,14 +220,14 @@ export default function HeroSection() {
                 sizes="300px"
               />
               <div className="absolute inset-0 bg-black/10" />
-              <div
+              {/* <div
                 className="absolute top-3 sm:top-4 right-3 sm:right-4 rounded-full px-2.5 sm:px-4 py-1 sm:py-1.5 shadow-md"
                 style={{ backgroundColor: '#9DC40E' }}
               >
                 <p className="text-white text-[9px] sm:text-xs font-bold tracking-wide">
                   WKO Partner
                 </p>
-              </div>
+              </div> */}
             </motion.div>
           </motion.div>
         </div>

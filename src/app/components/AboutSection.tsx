@@ -27,14 +27,14 @@ export default function AboutSection() {
                 sizes="300px"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4">
+              {/* <div className="absolute bottom-4 left-4 right-4">
                 <span
                   className="inline-block text-white text-xs font-bold px-3 py-1.5 rounded-lg"
                   style={{ backgroundColor: '#9DC40E' }}
                 >
                   {CONTACT_INFO.wkoPartnerLabel}
                 </span>
-              </div>
+              </div> */}
             </div>
             <div className="relative rounded-2xl overflow-hidden img-hover-zoom">
               <AppImage
@@ -76,11 +76,11 @@ export default function AboutSection() {
                 Ihnen durch Bürokratie, Steuern und rechtliche Anforderungen — damit Sie sich auf
                 Ihr Lokal konzentrieren können.
               </p>
-              <p className="leading-relaxed text-base" style={{ color: '#575757' }}>
+              {/* <p className="leading-relaxed text-base" style={{ color: '#575757' }}>
                 Als offizieller Partner der{' '}
                 <strong style={{ color: '#040404' }}>Wirtschaftskammer Wien (WKO)</strong> verfügen
                 wir über ein starkes Netzwerk aus Beratern und Dienstleistern.
-              </p>
+              </p> */}
             </div>
 
             {/* Vision Grid */}

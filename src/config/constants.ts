@@ -269,15 +269,15 @@ export const STATS_ITEMS = [
     isText: true,
     textValue: 'Wien',
   },
-  {
-    value: 0,
-    suffix: '',
-    label: 'WKO-Partner',
-    icon: 'ShieldCheckIcon' as const,
-    desc: 'Offiziell zertifiziert',
-    isText: true,
-    textValue: 'WKO',
-  },
+  // {
+  //   value: 0,
+  //   suffix: '',
+  //   label: 'WKO-Partner',
+  //   icon: 'ShieldCheckIcon' as const,
+  //   desc: 'Offiziell zertifiziert',
+  //   isText: true,
+  //   textValue: 'WKO',
+  // },
 ];
 
 export const STATS_CATEGORIES = [
@@ -302,7 +302,7 @@ export const INSURANCE_PARTNERS = [
     desc: 'Betriebshaftpflicht & Sachversicherung',
     logo: 'https://images.unsplash.com/photo-1670877127452-e113e18eb70d',
     logoAlt: 'Glass office building representing UNIQA insurance',
-    benefit: 'Sonderrabatte für WKO-Mitglieder',
+    benefit: 'Sonderrabatte',
   },
   {
     name: 'Wiener Städtische',

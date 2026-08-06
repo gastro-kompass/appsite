@@ -136,8 +136,7 @@ export default function Footer() {
               className="hover:underline font-semibold text-[#9DC40E]"
             >
               Rankskipper
-            </a>{' '}
-            | WKO Wien Partner
+            </a>
           </p>
           <div className="flex gap-5">
             <Link
