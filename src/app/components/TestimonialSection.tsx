@@ -31,7 +31,7 @@ export default function TestimonialSection() {
                   >
                     <AppImage
                       src={IMAGES.testimonialHeadshot}
-                      alt="Mustafa K., restaurant owner in Vienna, professional headshot"
+                      alt="Sarah K., restaurant owner in Vienna, professional headshot"
                       width={40}
                       height={40}
                       className="object-cover w-full h-full"
@@ -39,10 +39,10 @@ export default function TestimonialSection() {
                   </div>
                   <div>
                     <p className="font-bold text-sm" style={{ color: '#040404' }}>
-                      Mustafa K.
+                      Sarah K.
                     </p>
                     <p className="text-xs" style={{ color: '#575757' }}>
-                      Restaurantbesitzer, Wien 1030
+                      Restaurantbesitzerin, Wien 1030
                     </p>
                   </div>
                 </div>
